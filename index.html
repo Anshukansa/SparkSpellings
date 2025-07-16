@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpellRight - Master Your PTE & IELTS Spellings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+        :root {
+            --bg-color: #111111;
+            --text-color: #f0f0f0;
+            --primary-color: #007BFF;
+            --secondary-color: #1a1a1a;
+            --border-color: #333;
+            --text-muted: #888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: -webkit-linear-gradient(45deg, #007BFF, #48D1CC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header .sub-headline {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 18px 36px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 40px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: #0056b3;
+        }
+        
+        .price-tag {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+        
+        .section-title span {
+            color: var(--primary-color);
+        }
+        
+        .problem-box {
+            background-color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .problem-box p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+        
+        .problem-box strong {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .step {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .step .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .features-list li {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list .icon {
+            font-size: 1.5rem;
+            margin-right: 20px;
+            color: var(--primary-color);
+        }
+        
+        #cta-section {
+            background-color: var(--secondary-color);
+            text-align: center;
+            border-radius: 12px;
+            padding: 60px 20px;
+            border-top: none;
+        }
+
+        #cta-section .section-title {
+            margin-bottom: 20px;
+        }
+        
+        #cta-section p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .kofi-widget-placeholder {
+            margin-top: 50px;
+            padding: 20px;
+            border: 2px dashed var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .kofi-widget-placeholder p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>That One Spelling Mistake That Cost You Your Score? Never Again.</h1>
+            <p class="sub-headline">For dedicated PTE & IELTS students, a single spelling error can mean the difference between passing and failing. Stop leaving your success to chance.</p>
+            <a href="#cta-section" class="cta-button">Get Instant Access for AUD$9</a>
+            <p class="price-tag">One-time payment. Lifetime access. No subscriptions.</p>
+        </header>
+
+        <main>
+            <section id="problem">
+                 <div class="problem-box">
+                    <p>You've spent months, even years, perfecting your grammar, vocabulary, and fluency. You practice for hours every day. Yet, during the high-pressure exam, a simple but tricky word slips through... <strong>"accommodation," "necessary," "questionnaire."</strong> You know the material, but a moment of doubt leads to a mistake that invalidates your hard work. <strong>It’s not a knowledge problem; it’s a recall problem.</strong> This tiny error costs you critical points, forcing you to wait, pay again, and re-live the stress of the exam. How many times can you afford for this to happen?</p>
+                </div>
+            </section>
+
+            <section id="solution">
+                <h2 class="section-title">Your <span>Secret Weapon</span> for Spelling Perfection</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: -20px auto 0;">Introducing SpellRight, the only tool designed specifically for serious PTE and IELTS candidates who refuse to let spelling mistakes ruin their score. It's not another generic spelling app. It's your personalized practice system, built to integrate seamlessly into your study routine.</p>
+            </section>
+
+            <section id="how-it-works">
+                <h2 class="section-title">Effortless in <span>3 Simple Steps</span></h2>
+                <div class="how-it-works-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Find & Highlight</h3>
+                        <p>While reading any article, practice test, or forum online, you find a word you struggle with.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Right-Click & Add</h3>
+                        <p>Simply right-click the word and add it to your personal SpellRight list. No more switching tabs or writing in notebooks.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Practice & Perfect</h3>
+                        <p>Open the extension to practice your curated list of difficult words until they become second nature.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features">
+                <h2 class="section-title">Turn Your Weakness Into Your <span>Strength</span></h2>
+                <ul class="features-list">
+                    <li>
+                        <span class="icon">✓</span>
+                        <div>
+                            <strong>Build Your Personal List:</strong> Stop wasting time on generic word lists. Focus only on the spellings that *you* find difficult.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">✓</span>
+                        <div>
+                            <strong>Seamless Workflow Integration:</strong> Add words on-the-fly from any website in Chrome. Never break your study concentration again.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">✓</span>
+                        <div>
+                            <strong>Targeted Practice Interface:</strong> A clean, distraction-free environment to test and re-test yourself, turning your weak points into mastered skills.
+                        </div>
+                    </li>
+                    <li>
+                         <span class="icon">✓</span>
+                        <div>
+                            <strong>Lightweight & Fast:</strong> No bloat. The extension is built to be fast and simple, so it never slows down your browser or your progress.
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="cta-section">
+                <h2 class="section-title">Get The Unfair Advantage For Less Than The Price Of A Movie Ticket.</h2>
+                <p>Think about the cost of re-taking your exam. The fees, the travel, the time, the stress. For a tiny, one-time investment of just AUD$9, you can eliminate your biggest risk.</p>
+                <a href="#" class="cta-button">Secure My Score for AUD$9</a>
+                <p class="price-tag">Click the button to get instant access. 100% Secure Checkout.</p>
+
+                <div class="kofi-widget-placeholder">
+                    <p><strong>Want to support us further?</strong><br>Paste your Ko-fi widget code here.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by Veer Krupa Group</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
