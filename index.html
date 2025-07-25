@@ -658,36 +658,13 @@
         </footer>
     </div>
 
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>
-        // Ko-fi widget setup
-        kofiWidgetOverlay.draw('anshupatel', {
-            'type': 'floating-chat',
-            'floating-chat.donateButton.text': 'Support me',
-            'floating-chat.donateButton.background-color': '#00b9fe',
-            'floating-chat.donateButton.text-color': '#fff'
-        });
-
-        // Smooth scrolling for anchor links (except payment buttons)
-        document.querySelectorAll('a[href^="#"]:not(.payment-btn)').forEach(anchor => {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
-                });
-            });
-        });
-
-        // Payment button functionality
-        document.querySelectorAll('.payment-btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Trigger Ko-fi overlay
-                kofiWidgetOverlay.draw('anshupatel', {
-                    'type': 'floating-chat',
-                    'floating-chat.donateButton.text': 'Get SpellGuard - AUD$9',
-                    'floating-chat.donateButton.background-color': '#8E2DE2',
-                    'floating-chat.donateButton.text-color': '#fff'
                 });
             });
         });
