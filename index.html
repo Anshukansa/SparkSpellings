@@ -128,6 +128,10 @@
             height: 24px;
             fill: white;
         }
+
+        .sound-toggle.hidden {
+            display: none;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -165,17 +169,12 @@
                                 id="heroVideo"
                                 class="rounded-xl border border-purple-500/30 w-full" 
                                 src="GIF.mp4" 
-                                autoplay 
-                                loop 
                                 muted 
                                 playsinline>
                             </video>
-                            <button id="soundToggle" class="sound-toggle" aria-label="Toggle sound">
-                                <svg id="soundOffIcon" class="sound-icon" viewBox="0 0 24 24">
-                                    <path d="M3.63 3.63a.996.996 0 0 0 0 1.41L7.29 8.7 7 9H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h3l3.29 3.29c.63.63 1.71.18 1.71-.71v-4.17l4.18 4.18c-.49.37-1.02.68-1.6.91-.36.15-.58.53-.58.92 0 .72.73 1.18 1.39.91.8-.33 1.55-.77 2.22-1.31l4.18 4.18a.996.996 0 1 0 1.41-1.41L5.05 3.63c-.39-.39-1.02-.39-1.42 0zM19 12c0 .82-.15 1.61-.41 2.34l1.53 1.53c.56-1.17.88-2.48.88-3.87 0-3.83-2.4-7.11-5.78-8.4-.59-.23-1.22.23-1.22.86v.19c0 .38.25.71.61.85C17.18 6.54 19 9.06 19 12zm-8.71-6.29l-.17.17L12 7.76V6.41c0-.89-1.08-1.34-1.71-.71z"/>
-                                </svg>
-                                <svg id="soundOnIcon" class="sound-icon hidden" viewBox="0 0 24 24">
-                                    <path d="M3 10v4c0 .55.45 1 1 1h3l3.29 3.29c.63.63 1.71.18 1.71-.71V6.41c0-.89-1.08-1.34-1.71-.71L7 9H4c-.55 0-1-.45-1-1zm13.5 2A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 4.45v.2c0 .38.25.71.6.85C17.18 6.53 19 9.06 19 12s-1.82 5.47-4.4 6.5c-.36.14-.6.47-.6.85v.2c0 .63.63 1.07 1.21.85C18.6 19.11 21 15.84 21 12s-2.4-7.11-5.79-8.4c-.58-.23-1.21.22-1.21.85z"/>
+                            <button id="playButton" class="sound-toggle" aria-label="Play video with sound">
+                                <svg class="sound-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
                                 </svg>
                             </button>
                         </div>
@@ -220,7 +219,7 @@
             <section id="value" class="py-20">
                 <div class="max-w-4xl mx-auto px-4">
                     <div class="text-center">
-                        <h2 class="text-3xl sm:text-4xl font-bold text-white">These 15 Words Are <span class="gradient-text">Stealing Your Marks</span></h2>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white">These 50 Words Are <span class="gradient-text">Stealing Your Marks</span></h2>
                         <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">We analyzed thousands of practice tests. These are the hidden traps that cost students their dream scores, again and again.</p>
                     </div>
                     <div class="mt-12 overflow-x-auto">
@@ -232,49 +231,268 @@
                                     <th class="p-4 text-sm font-semibold text-white">The Rule / Reason</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="spellingTableBody">
                                 <tr class="border-b border-gray-800">
                                     <td class="p-4 font-mono text-white">Accommodation</td>
                                     <td class="p-4 font-mono text-red-400">accomodation</td>
                                     <td class="p-4 text-gray-400">Double 'C', Double 'M'.</td>
                                 </tr>
                                 <tr class="border-b border-gray-800 bg-white/5">
-                                    <td class="p-4 font-mono text-white">Separate</td>
-                                    <td class="p-4 font-mono text-red-400">seperate</td>
-                                    <td class="p-4 text-gray-400">There's "a rat" in separate.</td>
+                                    <td class="p-4 font-mono text-white">Acquaintance</td>
+                                    <td class="p-4 font-mono text-red-400">aquaintance</td>
+                                    <td class="p-4 text-gray-400">Remember the 'C' before 'Q'.</td>
                                 </tr>
                                 <tr class="border-b border-gray-800">
-                                    <td class="p-4 font-mono text-white">Receive</td>
-                                    <td class="p-4 font-mono text-red-400">recieve</td>
-                                    <td class="p-4 text-gray-400">'i' before 'e' except after 'c'.</td>
+                                    <td class="p-4 font-mono text-white">Advertisement</td>
+                                    <td class="p-4 font-mono text-red-400">advertisment</td>
+                                    <td class="p-4 text-gray-400">Don't forget the 'E'.</td>
                                 </tr>
                                 <tr class="border-b border-gray-800 bg-white/5">
+                                    <td class="p-4 font-mono text-white">Amateur</td>
+                                    <td class="p-4 font-mono text-red-400">amature</td>
+                                    <td class="p-4 text-gray-400">Has 'A' like "mature".</td>
+                                </tr>
+                                <tr class="border-b border-gray-800">
+                                    <td class="p-4 font-mono text-white">Apparent</td>
+                                    <td class="p-4 font-mono text-red-400">aparent</td>
+                                    <td class="p-4 text-gray-400">Double 'P' like "appear".</td>
+                                </tr>
+                                <!-- Hidden rows that will be shown when "See All" is clicked -->
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Archaeology</td>
+                                    <td class="p-4 font-mono text-red-400">archeology</td>
+                                    <td class="p-4 text-gray-400">British spelling with 'AE'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Argument</td>
+                                    <td class="p-4 font-mono text-red-400">arguement</td>
+                                    <td class="p-4 text-gray-400">No 'E' after 'U'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Assessment</td>
+                                    <td class="p-4 font-mono text-red-400">assesment</td>
+                                    <td class="p-4 text-gray-400">Double 'S' in the middle.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Atmosphere</td>
+                                    <td class="p-4 font-mono text-red-400">atmoshere</td>
+                                    <td class="p-4 text-gray-400">Don't forget the 'P'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Bureaucracy</td>
+                                    <td class="p-4 font-mono text-red-400">burocracy</td>
+                                    <td class="p-4 text-gray-400">'EAU' like in French.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Business</td>
+                                    <td class="p-4 font-mono text-red-400">bussiness</td>
+                                    <td class="p-4 text-gray-400">One 'S' in middle, double at end.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Calendar</td>
+                                    <td class="p-4 font-mono text-red-400">calender</td>
+                                    <td class="p-4 text-gray-400">'A' not 'E' in the middle.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Campaign</td>
+                                    <td class="p-4 font-mono text-red-400">campain</td>
+                                    <td class="p-4 text-gray-400">Don't forget the 'G'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Caribbean</td>
+                                    <td class="p-4 font-mono text-red-400">Carribean</td>
+                                    <td class="p-4 text-gray-400">One 'R', double 'B'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Colleague</td>
+                                    <td class="p-4 font-mono text-red-400">collegue</td>
+                                    <td class="p-4 text-gray-400">Ends with 'AGUE'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Committee</td>
+                                    <td class="p-4 font-mono text-red-400">commitee</td>
+                                    <td class="p-4 text-gray-400">Double 'M', double 'T'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Conscious</td>
+                                    <td class="p-4 font-mono text-red-400">concious</td>
+                                    <td class="p-4 text-gray-400">'SC' in the middle.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Conscientious</td>
+                                    <td class="p-4 font-mono text-red-400">conciencious</td>
+                                    <td class="p-4 text-gray-400">'SC' like "conscious".</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Consequence</td>
+                                    <td class="p-4 font-mono text-red-400">consequense</td>
+                                    <td class="p-4 text-gray-400">Ends with 'ENCE'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Controversial</td>
+                                    <td class="p-4 font-mono text-red-400">contraversial</td>
+                                    <td class="p-4 text-gray-400">'OV' not 'AV'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Definitely</td>
+                                    <td class="p-4 font-mono text-red-400">definately</td>
+                                    <td class="p-4 text-gray-400">Comes from "finite".</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Disappoint</td>
+                                    <td class="p-4 font-mono text-red-400">dissapoint</td>
+                                    <td class="p-4 text-gray-400">One 'S', not double.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Discipline</td>
+                                    <td class="p-4 font-mono text-red-400">dicipline</td>
+                                    <td class="p-4 text-gray-400">Has 'SC' like "science".</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Embarrassment</td>
+                                    <td class="p-4 font-mono text-red-400">embarassment</td>
+                                    <td class="p-4 text-gray-400">Double 'R', Double 'S'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Environment</td>
+                                    <td class="p-4 font-mono text-red-400">enviroment</td>
+                                    <td class="p-4 text-gray-400">Has 'N' before 'M'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Exaggerate</td>
+                                    <td class="p-4 font-mono text-red-400">exagerate</td>
+                                    <td class="p-4 text-gray-400">Double 'G'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Excellent</td>
+                                    <td class="p-4 font-mono text-red-400">excelent</td>
+                                    <td class="p-4 text-gray-400">Double 'L'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Existence</td>
+                                    <td class="p-4 font-mono text-red-400">existance</td>
+                                    <td class="p-4 text-gray-400">Ends with 'ENCE'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">February</td>
+                                    <td class="p-4 font-mono text-red-400">Febuary</td>
+                                    <td class="p-4 text-gray-400">Don't forget the first 'R'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Fluorescent</td>
+                                    <td class="p-4 font-mono text-red-400">florescent</td>
+                                    <td class="p-4 text-gray-400">Has 'UO' like "fluor".</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Government</td>
+                                    <td class="p-4 font-mono text-red-400">goverment</td>
+                                    <td class="p-4 text-gray-400">Don't forget the 'N'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Grammar</td>
+                                    <td class="p-4 font-mono text-red-400">grammer</td>
+                                    <td class="p-4 text-gray-400">Ends with 'AR' not 'ER'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Guarantee</td>
+                                    <td class="p-4 font-mono text-red-400">guarentee</td>
+                                    <td class="p-4 text-gray-400">'A' before 'N'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Immediately</td>
+                                    <td class="p-4 font-mono text-red-400">imediately</td>
+                                    <td class="p-4 text-gray-400">Double 'M'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Independent</td>
+                                    <td class="p-4 font-mono text-red-400">independant</td>
+                                    <td class="p-4 text-gray-400">Ends with 'ENT'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Intelligence</td>
+                                    <td class="p-4 font-mono text-red-400">inteligence</td>
+                                    <td class="p-4 text-gray-400">Double 'L'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Knowledge</td>
+                                    <td class="p-4 font-mono text-red-400">knowlege</td>
+                                    <td class="p-4 text-gray-400">Silent 'D' before 'G'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Laboratory</td>
+                                    <td class="p-4 font-mono text-red-400">laboritory</td>
+                                    <td class="p-4 text-gray-400">'AT' not 'IT' in middle.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Library</td>
+                                    <td class="p-4 font-mono text-red-400">libary</td>
+                                    <td class="p-4 text-gray-400">Don't forget the 'R'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Maintenance</td>
+                                    <td class="p-4 font-mono text-red-400">maintainence</td>
+                                    <td class="p-4 text-gray-400">Ends with 'ANCE'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Millennium</td>
+                                    <td class="p-4 font-mono text-red-400">millenium</td>
+                                    <td class="p-4 text-gray-400">Double 'L', double 'N'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
                                     <td class="p-4 font-mono text-white">Necessary</td>
                                     <td class="p-4 font-mono text-red-400">neccessary</td>
                                     <td class="p-4 text-gray-400">One 'C', two 'S's.</td>
                                 </tr>
-                                <tr class="border-b border-gray-800">
-                                    <td class="p-4 font-mono text-white">Government</td>
-                                    <td class="p-4 font-mono text-red-400">goverment</td>
-                                    <td class="p-4 text-gray-400">Don't forget the 'n'.</td>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Nuisance</td>
+                                    <td class="p-4 font-mono text-red-400">nuissance</td>
+                                    <td class="p-4 text-gray-400">Only one 'S'.</td>
                                 </tr>
-                                 <tr class="border-b border-gray-800 bg-white/5">
-                                    <td class="p-4 font-mono text-white">Definitely</td>
-                                    <td class="p-4 font-mono text-red-400">definately</td>
-                                    <td class="p-4 text-gray-400">Comes from the word "finite".</td>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Occurrence</td>
+                                    <td class="p-4 font-mono text-red-400">occurence</td>
+                                    <td class="p-4 text-gray-400">Double 'C', double 'R'.</td>
                                 </tr>
-                                <tr class="border-b border-gray-800">
-                                    <td class="p-4 font-mono text-white">Embarrass</td>
-                                    <td class="p-4 font-mono text-red-400">embarass</td>
-                                    <td class="p-4 text-gray-400">Double 'R', Double 'S'.</td>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Parliament</td>
+                                    <td class="p-4 font-mono text-red-400">parliment</td>
+                                    <td class="p-4 text-gray-400">'IA' in the middle.</td>
                                 </tr>
-                                <tr class="border-b border-gray-800 bg-white/5">
-                                    <td class="p-4 font-mono text-white">Occasion</td>
-                                    <td class="p-4 font-mono text-red-400">occassion</td>
-                                    <td class="p-4 text-gray-400">Double 'C', single 'S'.</td>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Professor</td>
+                                    <td class="p-4 font-mono text-red-400">profesor</td>
+                                    <td class="p-4 text-gray-400">Double 'S'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Questionnaire</td>
+                                    <td class="p-4 font-mono text-red-400">questionaire</td>
+                                    <td class="p-4 text-gray-400">Double 'N'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Restaurant</td>
+                                    <td class="p-4 font-mono text-red-400">restaraunt</td>
+                                    <td class="p-4 text-gray-400">'AU' at the end.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Schedule</td>
+                                    <td class="p-4 font-mono text-red-400">shedule</td>
+                                    <td class="p-4 text-gray-400">Starts with 'SCH'.</td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                    <td class="p-4 font-mono text-white">Separate</td>
+                                    <td class="p-4 font-mono text-red-400">seperate</td>
+                                    <td class="p-4 text-gray-400">There's "a rat" in separate.</td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button id="seeAllBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                            See All 50 Words
+                        </button>
+                        <button id="showLessBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300" style="display: none;">
+                            Show Less
+                        </button>
                     </div>
                 </div>
             </section>
@@ -501,64 +719,53 @@
         `;
         document.head.appendChild(style);
 
-        // Video sound toggle functionality with auto-mute after one complete cycle
+        // See All Words functionality
+        const seeAllBtn = document.getElementById('seeAllBtn');
+        const showLessBtn = document.getElementById('showLessBtn');
+        const hiddenRows = document.querySelectorAll('.hidden-rows');
+
+        seeAllBtn.addEventListener('click', function() {
+            hiddenRows.forEach(row => {
+                row.style.display = 'table-row';
+            });
+            seeAllBtn.style.display = 'none';
+            showLessBtn.style.display = 'inline-block';
+        });
+
+        showLessBtn.addEventListener('click', function() {
+            hiddenRows.forEach(row => {
+                row.style.display = 'none';
+            });
+            showLessBtn.style.display = 'none';
+            seeAllBtn.style.display = 'inline-block';
+            // Scroll back to the table
+            document.getElementById('value').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Video play functionality
         const video = document.getElementById('heroVideo');
-        const soundToggle = document.getElementById('soundToggle');
-        const soundOffIcon = document.getElementById('soundOffIcon');
-        const soundOnIcon = document.getElementById('soundOnIcon');
+        const playButton = document.getElementById('playButton');
         
-        let isUnmutedByUser = false;
-        let hasCompletedCycle = false;
-        let unmutedStartTime = 0;
-
-        soundToggle.addEventListener('click', function() {
-            if (video.muted) {
-                video.muted = false;
-                isUnmutedByUser = true;
-                hasCompletedCycle = false;
-                unmutedStartTime = video.currentTime;
-                soundOffIcon.classList.add('hidden');
-                soundOnIcon.classList.remove('hidden');
-            } else {
-                video.muted = true;
-                isUnmutedByUser = false;
-                hasCompletedCycle = false;
-                soundOffIcon.classList.remove('hidden');
-                soundOnIcon.classList.add('hidden');
-            }
+        playButton.addEventListener('click', function() {
+            video.muted = false;
+            video.play();
+            playButton.classList.add('hidden');
         });
 
-        // Listen for when video seeks to beginning (loop event)
-        video.addEventListener('seeked', function() {
-            if (isUnmutedByUser && !video.muted && video.currentTime < 1 && hasCompletedCycle) {
-                // Video has completed one full cycle and looped back, mute it
-                video.muted = true;
-                isUnmutedByUser = false;
-                hasCompletedCycle = false;
-                soundOffIcon.classList.remove('hidden');
-                soundOnIcon.classList.add('hidden');
-            }
-        });
-
-        // Track when video completes a cycle
-        video.addEventListener('timeupdate', function() {
-            if (isUnmutedByUser && !video.muted) {
-                // Mark cycle as complete when we've played through most of the video
-                if (video.currentTime > unmutedStartTime || (unmutedStartTime > video.duration * 0.8 && video.currentTime > video.duration * 0.8)) {
-                    hasCompletedCycle = true;
-                }
-            }
-        });
-
-        // Also handle the ended event as backup
+        // Show play button again when video ends
         video.addEventListener('ended', function() {
-            if (isUnmutedByUser && !video.muted) {
-                video.muted = true;
-                isUnmutedByUser = false;
-                hasCompletedCycle = false;
-                soundOffIcon.classList.remove('hidden');
-                soundOnIcon.classList.add('hidden');
-            }
+            video.muted = true;
+            playButton.classList.remove('hidden');
+        });
+
+        // Hide play button when video starts playing
+        video.addEventListener('play', function() {
+            playButton.classList.add('hidden');
+        });
+
+        // Show play button if video is paused
+        video.addEventListener('pause', function() {
+            playButton.classList.remove('hidden');
         });
 
     </script>
