@@ -286,24 +286,26 @@
                          <h2 class="text-3xl sm:text-4xl font-bold text-white">Introducing Your <span class="gradient-text">AI-Proof Shield</span></h2>
                         <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">SpellGuard isn't another generic vocabulary app. It's your personal spelling trainer, designed to turn your weaknesses into strengths.</p>
                     </div>
-                    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="text-center">
-                            <div class="mx-auto rounded-full w-24 h-24 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
-                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                </svg>
+                    <div class="mt-16 flex justify-center">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl">
+                            <div class="text-center">
+                                <div class="mx-auto rounded-full w-24 h-24 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-6 text-xl font-semibold text-white">Build Your Arsenal, Instantly</h3>
+                                <p class="mt-2 text-gray-400">See a difficult word anywhere online? Right-click and add it to your personal practice list. No more forgetting.</p>
                             </div>
-                            <h3 class="mt-6 text-xl font-semibold text-white">Build Your Arsenal, Instantly</h3>
-                            <p class="mt-2 text-gray-400">See a difficult word anywhere online? Right-click and add it to your personal practice list. No more forgetting.</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="mx-auto rounded-full w-24 h-24 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
-                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V15H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
-                                </svg>
+                            <div class="text-center">
+                                <div class="mx-auto rounded-full w-24 h-24 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V15H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-6 text-xl font-semibold text-white">Walk In With Confidence</h3>
+                                <p class="mt-2 text-gray-400">Stop worrying about silly mistakes. Know you've systematically eliminated your weaknesses and focus on scoring points.</p>
                             </div>
-                            <h3 class="mt-6 text-xl font-semibold text-white">Walk In With Confidence</h3>
-                            <p class="mt-2 text-gray-400">Stop worrying about silly mistakes. Know you've systematically eliminated your weaknesses and focus on scoring points.</p>
                         </div>
                     </div>
                 </div>
@@ -322,7 +324,7 @@
                                 <img src="https://placehold.co/40x40/CF8BF3/FFFFFF?text=A" class="rounded-full" alt="Anjali P.">
                                 <div class="ml-4">
                                     <p class="font-semibold text-white">Anjali P.</p>
-                                    <p class="text-sm text-gray-500">Ahmedabad</p>
+                                    <p class="text-sm text-gray-500">Mumbai</p>
                                 </div>
                             </div>
                         </div>
@@ -331,7 +333,7 @@
                              <div class="mt-6 flex items-center">
                                 <img src="https://placehold.co/40x40/A770EF/FFFFFF?text=D" class="rounded-full" alt="David L.">
                                 <div class="ml-4">
-                                    <p class="font-semibold text-white">Kartik L.</p>
+                                    <p class="font-semibold text-white">David L.</p>
                                     <p class="text-sm text-gray-500">Sydney</p>
                                 </div>
                             </div>
@@ -488,6 +490,15 @@
                 soundOffIcon.classList.add('hidden');
                 soundOnIcon.classList.remove('hidden');
             } else {
+                video.muted = true;
+                soundOffIcon.classList.remove('hidden');
+                soundOnIcon.classList.add('hidden');
+            }
+        });
+
+        // Auto-mute video after it finishes playing when unmuted
+        video.addEventListener('ended', function() {
+            if (!video.muted) {
                 video.muted = true;
                 soundOffIcon.classList.remove('hidden');
                 soundOnIcon.classList.add('hidden');
