@@ -478,30 +478,42 @@
         `;
         document.head.appendChild(style);
 
-        // Video sound toggle functionality
+        // Video sound toggle functionality with auto-mute after one cycle
         const video = document.getElementById('heroVideo');
         const soundToggle = document.getElementById('soundToggle');
         const soundOffIcon = document.getElementById('soundOffIcon');
         const soundOnIcon = document.getElementById('soundOnIcon');
+        
+        let isUnmutedByUser = false;
+        let lastCurrentTime = 0;
 
         soundToggle.addEventListener('click', function() {
             if (video.muted) {
                 video.muted = false;
+                isUnmutedByUser = true;
+                lastCurrentTime = video.currentTime;
                 soundOffIcon.classList.add('hidden');
                 soundOnIcon.classList.remove('hidden');
             } else {
                 video.muted = true;
+                isUnmutedByUser = false;
                 soundOffIcon.classList.remove('hidden');
                 soundOnIcon.classList.add('hidden');
             }
         });
 
-        // Auto-mute video after it finishes playing when unmuted
-        video.addEventListener('ended', function() {
-            if (!video.muted) {
-                video.muted = true;
-                soundOffIcon.classList.remove('hidden');
-                soundOnIcon.classList.add('hidden');
+        // Monitor video time to detect when it loops back to beginning
+        video.addEventListener('timeupdate', function() {
+            if (isUnmutedByUser && !video.muted) {
+                // If current time is significantly less than last time, video has looped
+                if (video.currentTime < lastCurrentTime && lastCurrentTime > video.duration * 0.8) {
+                    // Video has completed one cycle, mute it again
+                    video.muted = true;
+                    isUnmutedByUser = false;
+                    soundOffIcon.classList.remove('hidden');
+                    soundOnIcon.classList.add('hidden');
+                }
+                lastCurrentTime = video.currentTime;
             }
         });
 
