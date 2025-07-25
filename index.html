@@ -140,7 +140,7 @@
         <header class="absolute top-0 left-0 right-0 z-10 py-6 px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto flex justify-between items-center">
                 <h1 class="text-2xl font-bold text-white">Spell<span class="gradient-text">Guard</span></h1>
-                <a href="#offer" class="btn-primary text-white font-semibold py-2 px-6 rounded-lg hidden sm:inline-block">Get SpellGuard</a>
+                <a href="#" class="btn-primary payment-btn text-white font-semibold py-2 px-6 rounded-lg hidden sm:inline-block">Get SpellGuard</a>
             </div>
         </header>
 
@@ -155,7 +155,7 @@
                         For just AUD$9, get the only tool designed by former students to help you master <strong>your</strong> personal spelling weaknesses and secure the score you deserve.
                     </p>
                     <div class="mt-10">
-                        <a href="#offer" class="btn-primary text-white font-bold py-4 px-10 text-lg rounded-lg">
+                        <a href="#" class="btn-primary payment-btn text-white font-bold py-4 px-10 text-lg rounded-lg">
                             Stop Losing Marks - Get Instant Access
                         </a>
                     </div>
@@ -362,7 +362,7 @@
                         <p class="mt-2 text-gray-400">One-time payment. No subscriptions. Ever.</p>
                     </div>
                     <div class="mt-10">
-                        <a href="#payment-placeholder" class="btn-primary text-white font-bold py-4 px-10 text-xl rounded-lg">
+                        <a href="#" class="btn-primary payment-btn text-white font-bold py-4 px-10 text-xl rounded-lg">
                            Get Instant Access Now
                         </a>
                         <p class="mt-3 text-sm text-gray-500">Limited-Time Launch Price. Price increasing to AUD$29 soon.</p>
@@ -411,13 +411,13 @@
                 <div class="max-w-3xl mx-auto px-4 text-center">
                     <h2 class="text-3xl font-bold text-white">Like Our Work?</h2>
                     <p class="mt-4 text-lg text-gray-400">We're a small team fueled by passion and coffee. If you find SpellGuard valuable, consider supporting our mission to create more affordable tools for students.</p>
-                    <div class="mt-8 kofi-placeholder p-10 rounded-lg">
-                        <p class="text-gray-400">Your Ko-fi widget will be embedded here.</p>
+                    <div class="mt-8 feature-card p-8 rounded-lg">
+                        <p class="text-gray-400">Support our mission to create affordable tools for students by purchasing SpellGuard or making a donation through our support widget.</p>
                     </div>
                      <div class="mt-16">
                         <h3 class="text-4xl font-bold text-white">Ready to Secure Your Score?</h3>
                         <div class="mt-8">
-                            <a href="#offer" class="btn-primary text-white font-bold py-4 px-10 text-xl rounded-lg">
+                            <a href="#" class="btn-primary payment-btn text-white font-bold py-4 px-10 text-xl rounded-lg">
                                Yes! Give Me Instant Access for AUD$9
                             </a>
                         </div>
@@ -440,13 +440,36 @@
         </footer>
     </div>
 
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Ko-fi widget setup
+        kofiWidgetOverlay.draw('anshupatel', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support me',
+            'floating-chat.donateButton.background-color': '#00b9fe',
+            'floating-chat.donateButton.text-color': '#fff'
+        });
+
+        // Smooth scrolling for anchor links (except payment buttons)
+        document.querySelectorAll('a[href^="#"]:not(.payment-btn)').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
+                });
+            });
+        });
+
+        // Payment button functionality
+        document.querySelectorAll('.payment-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Trigger Ko-fi overlay
+                kofiWidgetOverlay.draw('anshupatel', {
+                    'type': 'floating-chat',
+                    'floating-chat.donateButton.text': 'Get SpellGuard - AUD$9',
+                    'floating-chat.donateButton.background-color': '#8E2DE2',
+                    'floating-chat.donateButton.text-color': '#fff'
                 });
             });
         });
@@ -478,42 +501,63 @@
         `;
         document.head.appendChild(style);
 
-        // Video sound toggle functionality with auto-mute after one cycle
+        // Video sound toggle functionality with auto-mute after one complete cycle
         const video = document.getElementById('heroVideo');
         const soundToggle = document.getElementById('soundToggle');
         const soundOffIcon = document.getElementById('soundOffIcon');
         const soundOnIcon = document.getElementById('soundOnIcon');
         
         let isUnmutedByUser = false;
-        let lastCurrentTime = 0;
+        let hasCompletedCycle = false;
+        let unmutedStartTime = 0;
 
         soundToggle.addEventListener('click', function() {
             if (video.muted) {
                 video.muted = false;
                 isUnmutedByUser = true;
-                lastCurrentTime = video.currentTime;
+                hasCompletedCycle = false;
+                unmutedStartTime = video.currentTime;
                 soundOffIcon.classList.add('hidden');
                 soundOnIcon.classList.remove('hidden');
             } else {
                 video.muted = true;
                 isUnmutedByUser = false;
+                hasCompletedCycle = false;
                 soundOffIcon.classList.remove('hidden');
                 soundOnIcon.classList.add('hidden');
             }
         });
 
-        // Monitor video time to detect when it loops back to beginning
+        // Listen for when video seeks to beginning (loop event)
+        video.addEventListener('seeked', function() {
+            if (isUnmutedByUser && !video.muted && video.currentTime < 1 && hasCompletedCycle) {
+                // Video has completed one full cycle and looped back, mute it
+                video.muted = true;
+                isUnmutedByUser = false;
+                hasCompletedCycle = false;
+                soundOffIcon.classList.remove('hidden');
+                soundOnIcon.classList.add('hidden');
+            }
+        });
+
+        // Track when video completes a cycle
         video.addEventListener('timeupdate', function() {
             if (isUnmutedByUser && !video.muted) {
-                // If current time is significantly less than last time, video has looped
-                if (video.currentTime < lastCurrentTime && lastCurrentTime > video.duration * 0.8) {
-                    // Video has completed one cycle, mute it again
-                    video.muted = true;
-                    isUnmutedByUser = false;
-                    soundOffIcon.classList.remove('hidden');
-                    soundOnIcon.classList.add('hidden');
+                // Mark cycle as complete when we've played through most of the video
+                if (video.currentTime > unmutedStartTime || (unmutedStartTime > video.duration * 0.8 && video.currentTime > video.duration * 0.8)) {
+                    hasCompletedCycle = true;
                 }
-                lastCurrentTime = video.currentTime;
+            }
+        });
+
+        // Also handle the ended event as backup
+        video.addEventListener('ended', function() {
+            if (isUnmutedByUser && !video.muted) {
+                video.muted = true;
+                isUnmutedByUser = false;
+                hasCompletedCycle = false;
+                soundOffIcon.classList.remove('hidden');
+                soundOnIcon.classList.add('hidden');
             }
         });
 
