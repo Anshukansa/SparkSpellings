@@ -107,14 +107,21 @@
             background: rgba(0, 0, 0, 0.7);
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 48px;
+            height: 48px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
             z-index: 10;
+        }
+
+        @media (min-width: 640px) {
+            .sound-toggle {
+                width: 60px;
+                height: 60px;
+            }
         }
 
         .sound-toggle:hover {
@@ -124,9 +131,16 @@
         }
 
         .sound-icon {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             fill: white;
+        }
+
+        @media (min-width: 640px) {
+            .sound-icon {
+                width: 24px;
+                height: 24px;
+            }
         }
 
         .sound-toggle.hidden {
@@ -141,29 +155,29 @@
         <div class="radial-gradient-background"></div>
 
         <!-- Header -->
-        <header class="absolute top-0 left-0 right-0 z-10 py-6 px-4 sm:px-6 lg:px-8">
+        <header class="absolute top-0 left-0 right-0 z-10 py-4 sm:py-6 px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto flex justify-between items-center">
-                <h1 class="text-2xl font-bold text-white">Spell<span class="gradient-text">Guard</span></h1>
-                <a href="#payment" class="btn-primary payment-btn text-white font-semibold py-2 px-6 rounded-lg hidden sm:inline-block">Get SpellGuard</a>
+                <h1 class="text-xl sm:text-2xl font-bold text-white">Spell<span class="gradient-text">Guard</span></h1>
+                <a href="#payment" class="btn-primary payment-btn text-white font-semibold py-2 px-4 sm:px-6 rounded-lg text-sm sm:text-base">Get SpellGuard</a>
             </div>
         </header>
 
         <main class="relative overflow-hidden">
             <!-- Hero Section -->
-            <section id="hero" class="pt-32 pb-20 text-center">
-                <div class="max-w-4xl mx-auto px-4">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tighter">
-                        That Tiny Spelling Mistake? <br> The <span class="gradient-text">PTE Computer</span> Just Marked It Wrong.
+            <section id="hero" class="pt-24 sm:pt-32 pb-16 sm:pb-20 text-center px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tighter">
+                        That Tiny Spelling Mistake? <br class="hidden sm:block"> The <span class="gradient-text">PTE Computer</span> Just Marked It Wrong.
                     </h1>
-                    <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">
+                    <p class="mt-4 sm:mt-6 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 px-4">
                         For just AUD$9, get the only tool designed by former students to help you master <strong>your</strong> personal spelling weaknesses and secure the score you deserve.
                     </p>
-                    <div class="mt-10">
-                        <a href="#payment" class="btn-primary payment-btn text-white font-bold py-4 px-10 text-lg rounded-lg">
+                    <div class="mt-8 sm:mt-10">
+                        <a href="#payment" class="btn-primary payment-btn text-white font-bold py-3 sm:py-4 px-6 sm:px-10 text-base sm:text-lg rounded-lg inline-block">
                             Stop Losing Marks - Get Instant Access
                         </a>
                     </div>
-                    <div class="mt-16 hero-glow rounded-xl">
+                    <div class="mt-12 sm:mt-16 hero-glow rounded-xl">
                         <div class="video-container">
                             <video 
                                 id="heroVideo"
@@ -179,7 +193,6 @@
                             </button>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -216,281 +229,283 @@
             </section>
             
             <!-- High-Value Content Section -->
-            <section id="value" class="py-20">
-                <div class="max-w-4xl mx-auto px-4">
+            <section id="value" class="py-16 sm:py-20">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6">
                     <div class="text-center">
-                        <h2 class="text-3xl sm:text-4xl font-bold text-white">These 50 Words Are <span class="gradient-text">Stealing Your Marks</span></h2>
-                        <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">We analyzed thousands of practice tests. These are the hidden traps that cost students their dream scores, again and again.</p>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">These 50 Words Are <span class="gradient-text">Stealing Your Marks</span></h2>
+                        <p class="mt-4 text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">We analyzed thousands of practice tests. These are the hidden traps that cost students their dream scores, again and again.</p>
                     </div>
-                    <div class="mt-12 overflow-x-auto">
-                        <table class="w-full text-left border-collapse">
-                            <thead class="border-b border-gray-700">
-                                <tr>
-                                    <th class="p-4 text-sm font-semibold text-white">The Trap (Word)</th>
-                                    <th class="p-4 text-sm font-semibold text-white">Common Mistake</th>
-                                    <th class="p-4 text-sm font-semibold text-white">The Rule / Reason</th>
-                                </tr>
-                            </thead>
-                            <tbody id="spellingTableBody">
-                                <tr class="border-b border-gray-800">
-                                    <td class="p-4 font-mono text-white">Accommodation</td>
-                                    <td class="p-4 font-mono text-red-400">accomodation</td>
-                                    <td class="p-4 text-gray-400">Double 'C', Double 'M'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5">
-                                    <td class="p-4 font-mono text-white">Acquaintance</td>
-                                    <td class="p-4 font-mono text-red-400">aquaintance</td>
-                                    <td class="p-4 text-gray-400">Remember the 'C' before 'Q'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800">
-                                    <td class="p-4 font-mono text-white">Advertisement</td>
-                                    <td class="p-4 font-mono text-red-400">advertisment</td>
-                                    <td class="p-4 text-gray-400">Don't forget the 'E'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5">
-                                    <td class="p-4 font-mono text-white">Amateur</td>
-                                    <td class="p-4 font-mono text-red-400">amature</td>
-                                    <td class="p-4 text-gray-400">Has 'A' like "mature".</td>
-                                </tr>
-                                <tr class="border-b border-gray-800">
-                                    <td class="p-4 font-mono text-white">Apparent</td>
-                                    <td class="p-4 font-mono text-red-400">aparent</td>
-                                    <td class="p-4 text-gray-400">Double 'P' like "appear".</td>
-                                </tr>
-                                <!-- Hidden rows that will be shown when "See All" is clicked -->
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Archaeology</td>
-                                    <td class="p-4 font-mono text-red-400">archeology</td>
-                                    <td class="p-4 text-gray-400">British spelling with 'AE'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Argument</td>
-                                    <td class="p-4 font-mono text-red-400">arguement</td>
-                                    <td class="p-4 text-gray-400">No 'E' after 'U'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Assessment</td>
-                                    <td class="p-4 font-mono text-red-400">assesment</td>
-                                    <td class="p-4 text-gray-400">Double 'S' in the middle.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Atmosphere</td>
-                                    <td class="p-4 font-mono text-red-400">atmoshere</td>
-                                    <td class="p-4 text-gray-400">Don't forget the 'P'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Bureaucracy</td>
-                                    <td class="p-4 font-mono text-red-400">burocracy</td>
-                                    <td class="p-4 text-gray-400">'EAU' like in French.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Business</td>
-                                    <td class="p-4 font-mono text-red-400">bussiness</td>
-                                    <td class="p-4 text-gray-400">One 'S' in middle, double at end.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Calendar</td>
-                                    <td class="p-4 font-mono text-red-400">calender</td>
-                                    <td class="p-4 text-gray-400">'A' not 'E' in the middle.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Campaign</td>
-                                    <td class="p-4 font-mono text-red-400">campain</td>
-                                    <td class="p-4 text-gray-400">Don't forget the 'G'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Caribbean</td>
-                                    <td class="p-4 font-mono text-red-400">Carribean</td>
-                                    <td class="p-4 text-gray-400">One 'R', double 'B'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Colleague</td>
-                                    <td class="p-4 font-mono text-red-400">collegue</td>
-                                    <td class="p-4 text-gray-400">Ends with 'AGUE'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Committee</td>
-                                    <td class="p-4 font-mono text-red-400">commitee</td>
-                                    <td class="p-4 text-gray-400">Double 'M', double 'T'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Conscious</td>
-                                    <td class="p-4 font-mono text-red-400">concious</td>
-                                    <td class="p-4 text-gray-400">'SC' in the middle.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Conscientious</td>
-                                    <td class="p-4 font-mono text-red-400">conciencious</td>
-                                    <td class="p-4 text-gray-400">'SC' like "conscious".</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Consequence</td>
-                                    <td class="p-4 font-mono text-red-400">consequense</td>
-                                    <td class="p-4 text-gray-400">Ends with 'ENCE'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Controversial</td>
-                                    <td class="p-4 font-mono text-red-400">contraversial</td>
-                                    <td class="p-4 text-gray-400">'OV' not 'AV'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Definitely</td>
-                                    <td class="p-4 font-mono text-red-400">definately</td>
-                                    <td class="p-4 text-gray-400">Comes from "finite".</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Disappoint</td>
-                                    <td class="p-4 font-mono text-red-400">dissapoint</td>
-                                    <td class="p-4 text-gray-400">One 'S', not double.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Discipline</td>
-                                    <td class="p-4 font-mono text-red-400">dicipline</td>
-                                    <td class="p-4 text-gray-400">Has 'SC' like "science".</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Embarrassment</td>
-                                    <td class="p-4 font-mono text-red-400">embarassment</td>
-                                    <td class="p-4 text-gray-400">Double 'R', Double 'S'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Environment</td>
-                                    <td class="p-4 font-mono text-red-400">enviroment</td>
-                                    <td class="p-4 text-gray-400">Has 'N' before 'M'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Exaggerate</td>
-                                    <td class="p-4 font-mono text-red-400">exagerate</td>
-                                    <td class="p-4 text-gray-400">Double 'G'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Excellent</td>
-                                    <td class="p-4 font-mono text-red-400">excelent</td>
-                                    <td class="p-4 text-gray-400">Double 'L'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Existence</td>
-                                    <td class="p-4 font-mono text-red-400">existance</td>
-                                    <td class="p-4 text-gray-400">Ends with 'ENCE'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">February</td>
-                                    <td class="p-4 font-mono text-red-400">Febuary</td>
-                                    <td class="p-4 text-gray-400">Don't forget the first 'R'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Fluorescent</td>
-                                    <td class="p-4 font-mono text-red-400">florescent</td>
-                                    <td class="p-4 text-gray-400">Has 'UO' like "fluor".</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Government</td>
-                                    <td class="p-4 font-mono text-red-400">goverment</td>
-                                    <td class="p-4 text-gray-400">Don't forget the 'N'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Grammar</td>
-                                    <td class="p-4 font-mono text-red-400">grammer</td>
-                                    <td class="p-4 text-gray-400">Ends with 'AR' not 'ER'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Guarantee</td>
-                                    <td class="p-4 font-mono text-red-400">guarentee</td>
-                                    <td class="p-4 text-gray-400">'A' before 'N'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Immediately</td>
-                                    <td class="p-4 font-mono text-red-400">imediately</td>
-                                    <td class="p-4 text-gray-400">Double 'M'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Independent</td>
-                                    <td class="p-4 font-mono text-red-400">independant</td>
-                                    <td class="p-4 text-gray-400">Ends with 'ENT'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Intelligence</td>
-                                    <td class="p-4 font-mono text-red-400">inteligence</td>
-                                    <td class="p-4 text-gray-400">Double 'L'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Knowledge</td>
-                                    <td class="p-4 font-mono text-red-400">knowlege</td>
-                                    <td class="p-4 text-gray-400">Silent 'D' before 'G'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Laboratory</td>
-                                    <td class="p-4 font-mono text-red-400">laboritory</td>
-                                    <td class="p-4 text-gray-400">'AT' not 'IT' in middle.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Library</td>
-                                    <td class="p-4 font-mono text-red-400">libary</td>
-                                    <td class="p-4 text-gray-400">Don't forget the 'R'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Maintenance</td>
-                                    <td class="p-4 font-mono text-red-400">maintainence</td>
-                                    <td class="p-4 text-gray-400">Ends with 'ANCE'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Millennium</td>
-                                    <td class="p-4 font-mono text-red-400">millenium</td>
-                                    <td class="p-4 text-gray-400">Double 'L', double 'N'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Necessary</td>
-                                    <td class="p-4 font-mono text-red-400">neccessary</td>
-                                    <td class="p-4 text-gray-400">One 'C', two 'S's.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Nuisance</td>
-                                    <td class="p-4 font-mono text-red-400">nuissance</td>
-                                    <td class="p-4 text-gray-400">Only one 'S'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Occurrence</td>
-                                    <td class="p-4 font-mono text-red-400">occurence</td>
-                                    <td class="p-4 text-gray-400">Double 'C', double 'R'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Parliament</td>
-                                    <td class="p-4 font-mono text-red-400">parliment</td>
-                                    <td class="p-4 text-gray-400">'IA' in the middle.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Professor</td>
-                                    <td class="p-4 font-mono text-red-400">profesor</td>
-                                    <td class="p-4 text-gray-400">Double 'S'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Questionnaire</td>
-                                    <td class="p-4 font-mono text-red-400">questionaire</td>
-                                    <td class="p-4 text-gray-400">Double 'N'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Restaurant</td>
-                                    <td class="p-4 font-mono text-red-400">restaraunt</td>
-                                    <td class="p-4 text-gray-400">'AU' at the end.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Schedule</td>
-                                    <td class="p-4 font-mono text-red-400">shedule</td>
-                                    <td class="p-4 text-gray-400">Starts with 'SCH'.</td>
-                                </tr>
-                                <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
-                                    <td class="p-4 font-mono text-white">Separate</td>
-                                    <td class="p-4 font-mono text-red-400">seperate</td>
-                                    <td class="p-4 text-gray-400">There's "a rat" in separate.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="mt-8 sm:mt-12 overflow-x-auto -mx-4 sm:mx-0">
+                        <div class="inline-block min-w-full px-4 sm:px-0">
+                            <table class="w-full text-left border-collapse min-w-[600px]">
+                                <thead class="border-b border-gray-700">
+                                    <tr>
+                                        <th class="p-3 sm:p-4 text-xs sm:text-sm font-semibold text-white">The Trap (Word)</th>
+                                        <th class="p-3 sm:p-4 text-xs sm:text-sm font-semibold text-white">Common Mistake</th>
+                                        <th class="p-3 sm:p-4 text-xs sm:text-sm font-semibold text-white">The Rule / Reason</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="spellingTableBody">
+                                    <tr class="border-b border-gray-800">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Accommodation</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">accomodation</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'C', Double 'M'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Acquaintance</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">aquaintance</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Remember the 'C' before 'Q'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Advertisement</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">advertisment</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Don't forget the 'E'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Amateur</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">amature</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Has 'A' like "mature".</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Apparent</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">aparent</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'P' like "appear".</td>
+                                    </tr>
+                                    <!-- Hidden rows that will be shown when "See All" is clicked -->
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Archaeology</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">archeology</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">British spelling with 'AE'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Argument</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">arguement</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">No 'E' after 'U'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Assessment</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">assesment</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'S' in the middle.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Atmosphere</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">atmoshere</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Don't forget the 'P'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Bureaucracy</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">burocracy</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'EAU' like in French.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Business</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">bussiness</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">One 'S' in middle, double at end.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Calendar</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">calender</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'A' not 'E' in the middle.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Campaign</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">campain</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Don't forget the 'G'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Caribbean</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">Carribean</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">One 'R', double 'B'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Colleague</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">collegue</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Ends with 'AGUE'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Committee</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">commitee</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'M', double 'T'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Conscious</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">concious</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'SC' in the middle.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Conscientious</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">conciencious</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'SC' like "conscious".</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Consequence</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">consequense</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Ends with 'ENCE'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Controversial</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">contraversial</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'OV' not 'AV'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Definitely</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">definately</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Comes from "finite".</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Disappoint</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">dissapoint</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">One 'S', not double.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Discipline</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">dicipline</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Has 'SC' like "science".</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Embarrassment</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">embarassment</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'R', Double 'S'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Environment</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">enviroment</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Has 'N' before 'M'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Exaggerate</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">exagerate</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'G'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Excellent</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">excelent</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'L'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Existence</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">existance</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Ends with 'ENCE'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">February</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">Febuary</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Don't forget the first 'R'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Fluorescent</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">florescent</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Has 'UO' like "fluor".</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Government</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">goverment</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Don't forget the 'N'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Grammar</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">grammer</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Ends with 'AR' not 'ER'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Guarantee</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">guarentee</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'A' before 'N'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Immediately</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">imediately</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'M'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Independent</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">independant</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Ends with 'ENT'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Intelligence</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">inteligence</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'L'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Knowledge</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">knowlege</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Silent 'D' before 'G'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Laboratory</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">laboritory</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'AT' not 'IT' in middle.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Library</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">libary</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Don't forget the 'R'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Maintenance</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">maintainence</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Ends with 'ANCE'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Millennium</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">millenium</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'L', double 'N'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Necessary</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">neccessary</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">One 'C', two 'S's.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Nuisance</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">nuissance</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Only one 'S'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Occurrence</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">occurence</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'C', double 'R'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Parliament</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">parliment</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'IA' in the middle.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Professor</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">profesor</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'S'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Questionnaire</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">questionaire</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Double 'N'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Restaurant</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">restaraunt</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">'AU' at the end.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Schedule</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">shedule</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">Starts with 'SCH'.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-800 bg-white/5 hidden-rows" style="display: none;">
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-white">Separate</td>
+                                        <td class="p-3 sm:p-4 font-mono text-sm sm:text-base text-red-400">seperate</td>
+                                        <td class="p-3 sm:p-4 text-sm sm:text-base text-gray-400">There's "a rat" in separate.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="mt-8 text-center">
-                        <button id="seeAllBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                    <div class="mt-6 sm:mt-8 text-center">
+                        <button id="seeAllBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-all duration-300 text-sm sm:text-base">
                             See All 50 Words
                         </button>
-                        <button id="showLessBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300" style="display: none;">
+                        <button id="showLessBtn" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-all duration-300 text-sm sm:text-base" style="display: none;">
                             Show Less
                         </button>
                     </div>
@@ -498,31 +513,31 @@
             </section>
 
             <!-- Solution Section -->
-            <section id="solution" class="py-20 bg-black">
-                <div class="max-w-4xl mx-auto px-4">
+            <section id="solution" class="py-16 sm:py-20 bg-black">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6">
                     <div class="text-center">
-                         <h2 class="text-3xl sm:text-4xl font-bold text-white">Introducing Your <span class="gradient-text">AI-Proof Shield</span></h2>
-                        <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">SpellGuard isn't another generic vocabulary app. It's your personal spelling trainer, designed to turn your weaknesses into strengths.</p>
+                         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Introducing Your <span class="gradient-text">AI-Proof Shield</span></h2>
+                        <p class="mt-4 text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">SpellGuard isn't another generic vocabulary app. It's your personal spelling trainer, designed to turn your weaknesses into strengths.</p>
                     </div>
-                    <div class="mt-16 flex justify-center">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl">
+                    <div class="mt-12 sm:mt-16 flex justify-center">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-3xl w-full">
                             <div class="text-center">
-                                <div class="mx-auto rounded-full w-24 h-24 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <div class="mx-auto rounded-full w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+                                    <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                                     </svg>
                                 </div>
-                                <h3 class="mt-6 text-xl font-semibold text-white">Build Your Arsenal, Instantly</h3>
-                                <p class="mt-2 text-gray-400">See a difficult word anywhere online? Right-click and add it to your personal practice list. No more forgetting.</p>
+                                <h3 class="mt-4 sm:mt-6 text-lg sm:text-xl font-semibold text-white">Build Your Arsenal, Instantly</h3>
+                                <p class="mt-2 text-sm sm:text-base text-gray-400">See a difficult word anywhere online? Right-click and add it to your personal practice list. No more forgetting.</p>
                             </div>
                             <div class="text-center">
-                                <div class="mx-auto rounded-full w-24 h-24 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <div class="mx-auto rounded-full w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">
+                                    <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V15H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
                                     </svg>
                                 </div>
-                                <h3 class="mt-6 text-xl font-semibold text-white">Walk In With Confidence</h3>
-                                <p class="mt-2 text-gray-400">Stop worrying about silly mistakes. Know you've systematically eliminated your weaknesses and focus on scoring points.</p>
+                                <h3 class="mt-4 sm:mt-6 text-lg sm:text-xl font-semibold text-white">Walk In With Confidence</h3>
+                                <p class="mt-2 text-sm sm:text-base text-gray-400">Stop worrying about silly mistakes. Know you've systematically eliminated your weaknesses and focus on scoring points.</p>
                             </div>
                         </div>
                     </div>
@@ -587,44 +602,93 @@
                     </div>
                     
                     <!-- Payment iframe -->
-                    <div id="payment" class="mt-16 bg-gray-900/50 border border-gray-700 rounded-lg p-6">
-                        <h3 class="text-2xl font-bold text-white text-center mb-6">Complete Your Purchase</h3>
-                        <iframe id='kofiframe' src='https://ko-fi.com/anshupatel/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='anshupatel'></iframe>
+                    <div id="payment" class="mt-16">
+                        <div class="feature-card p-8 rounded-xl">
+                            <div class="text-center mb-8">
+                                <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">🚀 Complete Your Purchase</h3>
+                                <p class="text-gray-400">Secure your spelling success in under 2 minutes</p>
+                                <div class="mt-4 flex items-center justify-center space-x-4 text-sm text-gray-500">
+                                    <span class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Secure Payment
+                                    </span>
+                                    <span class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Instant Access
+                                    </span>
+                                    <span class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        No Subscription
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <!-- Ko-fi iframe container with custom styling -->
+                            <div class="relative rounded-xl overflow-hidden border border-purple-500/20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
+                                <div class="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5"></div>
+                                <div class="relative p-2">
+                                    <iframe 
+                                        id='kofiframe' 
+                                        src='https://ko-fi.com/anshupatel/?hidefeed=true&widget=true&embed=true&preview=true' 
+                                        class="w-full rounded-lg"
+                                        style='border:none;background:transparent;' 
+                                        height='712' 
+                                        title='anshupatel'>
+                                    </iframe>
+                                </div>
+                            </div>
+                            
+                            <!-- Trust indicators -->
+                            <div class="mt-6 text-center">
+                                <p class="text-xs text-gray-500 mb-3">Powered by Ko-fi • Your payment information is secure and encrypted</p>
+                                <div class="flex justify-center items-center space-x-6 opacity-60">
+                                    <span class="text-xs text-gray-400">🔒 SSL Encrypted</span>
+                                    <span class="text-xs text-gray-400">💳 All Cards Accepted</span>
+                                    <span class="text-xs text-gray-400">🌍 Worldwide</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             
             <!-- Guarantee Section -->
-            <section id="guarantee" class="py-20">
-                <div class="max-w-3xl mx-auto px-4">
-                    <div class="guarantee-box p-8 rounded-lg text-center">
-                        <h3 class="text-3xl font-bold text-white">The Math That Will Shock You</h3>
-                        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                            <div class="bg-red-900/20 border border-red-500/30 p-6 rounded-lg">
-                                <h4 class="text-xl font-bold text-red-400 mb-4">❌ The Expensive Path</h4>
-                                <p class="text-gray-300 mb-3">PTE Exam Fee: <span class="font-bold text-white">AUD$475</span></p>
-                                <p class="text-gray-300 mb-3">Retake Fee: <span class="font-bold text-white">AUD$475</span></p>
-                                <p class="text-gray-300 mb-3">Lost Time: <span class="font-bold text-white">2-3 months</span></p>
-                                <p class="text-gray-300 mb-4">Delayed Dreams: <span class="font-bold text-white">Priceless</span></p>
-                                <p class="text-lg font-bold text-red-400">Total Risk: AUD$950+</p>
+            <section id="guarantee" class="py-16 sm:py-20">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <div class="guarantee-box p-6 sm:p-8 rounded-lg text-center">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white">The Math That Will Shock You</h3>
+                        <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 text-left">
+                            <div class="bg-red-900/20 border border-red-500/30 p-4 sm:p-6 rounded-lg">
+                                <h4 class="text-lg sm:text-xl font-bold text-red-400 mb-4">❌ The Expensive Path</h4>
+                                <p class="text-sm sm:text-base text-gray-300 mb-3">PTE Exam Fee: <span class="font-bold text-white">AUD$475</span></p>
+                                <p class="text-sm sm:text-base text-gray-300 mb-3">Retake Fee: <span class="font-bold text-white">AUD$475</span></p>
+                                <p class="text-sm sm:text-base text-gray-300 mb-3">Lost Time: <span class="font-bold text-white">2-3 months</span></p>
+                                <p class="text-sm sm:text-base text-gray-300 mb-4">Delayed Dreams: <span class="font-bold text-white">Priceless</span></p>
+                                <p class="text-base sm:text-lg font-bold text-red-400">Total Risk: AUD$950+</p>
                             </div>
-                            <div class="bg-green-900/20 border border-green-500/30 p-6 rounded-lg">
-                                <h4 class="text-xl font-bold text-green-400 mb-4">✅ The Smart Path</h4>
-                                <p class="text-gray-300 mb-3">SpellGuard: <span class="font-bold text-white">AUD$9</span></p>
-                                <p class="text-gray-300 mb-3">Time Saved: <span class="font-bold text-white">Months</span></p>
-                                <p class="text-gray-300 mb-3">Stress Avoided: <span class="font-bold text-white">Massive</span></p>
-                                <p class="text-gray-300 mb-4">Dreams Protected: <span class="font-bold text-white">Secured</span></p>
-                                <p class="text-lg font-bold text-green-400">Total Investment: AUD$9</p>
+                            <div class="bg-green-900/20 border border-green-500/30 p-4 sm:p-6 rounded-lg">
+                                <h4 class="text-lg sm:text-xl font-bold text-green-400 mb-4">✅ The Smart Path</h4>
+                                <p class="text-sm sm:text-base text-gray-300 mb-3">SpellGuard: <span class="font-bold text-white">AUD$9</span></p>
+                                <p class="text-sm sm:text-base text-gray-300 mb-3">Time Saved: <span class="font-bold text-white">Months</span></p>
+                                <p class="text-sm sm:text-base text-gray-300 mb-3">Stress Avoided: <span class="font-bold text-white">Massive</span></p>
+                                <p class="text-sm sm:text-base text-gray-300 mb-4">Dreams Protected: <span class="font-bold text-white">Secured</span></p>
+                                <p class="text-base sm:text-lg font-bold text-green-400">Total Investment: AUD$9</p>
                             </div>
                         </div>
-                        <div class="mt-8 bg-purple-900/20 border border-purple-500/30 p-6 rounded-lg">
-                            <p class="text-2xl font-bold text-white mb-4">Here's The Reality:</p>
-                            <p class="text-gray-300 text-lg leading-relaxed">
+                        <div class="mt-6 sm:mt-8 bg-purple-900/20 border border-purple-500/30 p-4 sm:p-6 rounded-lg">
+                            <p class="text-xl sm:text-2xl font-bold text-white mb-4">Here's The Reality:</p>
+                            <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
                                 <span class="font-bold text-purple-400">One spelling mistake</span> costs you AUD$475 to retake the test. 
                                 <span class="font-bold text-purple-400">Two mistakes?</span> That's AUD$950. 
                                 <span class="font-bold text-white">SpellGuard costs AUD$9</span> - less than what you spend on coffee in a week.
                             </p>
-                            <p class="mt-4 text-xl font-bold text-green-400">
+                            <p class="mt-4 text-lg sm:text-xl font-bold text-green-400">
                                 This isn't an expense. It's the cheapest insurance policy for your future you'll ever buy.
                             </p>
                         </div>
@@ -633,42 +697,42 @@
             </section>
             
             <!-- FAQ Section -->
-            <section id="faq" class="py-20 bg-black">
-                <div class="max-w-3xl mx-auto px-4">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-                    <div class="space-y-4">
-                        <details class="faq-item p-4 rounded-lg cursor-pointer">
-                            <summary class="font-semibold text-lg text-white">Is this a one-time payment?</summary>
-                            <p class="mt-3 text-gray-400">Yes! It's a single payment of AUD$9 for lifetime access, including all future updates. No recurring fees, ever.</p>
+            <section id="faq" class="py-16 sm:py-20 bg-black">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12">Frequently Asked Questions</h2>
+                    <div class="space-y-3 sm:space-y-4">
+                        <details class="faq-item p-4 sm:p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-base sm:text-lg text-white">Is this a one-time payment?</summary>
+                            <p class="mt-3 text-sm sm:text-base text-gray-400">Yes! It's a single payment of AUD$9 for lifetime access, including all future updates. No recurring fees, ever.</p>
                         </details>
-                        <details class="faq-item p-4 rounded-lg cursor-pointer">
-                            <summary class="font-semibold text-lg text-white">What browsers does this work on?</summary>
-                            <p class="mt-3 text-gray-400">SpellGuard is currently built for Google Chrome and other Chromium-based browsers like Brave and Microsoft Edge.</p>
+                        <details class="faq-item p-4 sm:p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-base sm:text-lg text-white">What browsers does this work on?</summary>
+                            <p class="mt-3 text-sm sm:text-base text-gray-400">SpellGuard is currently built for Google Chrome and other Chromium-based browsers like Brave and Microsoft Edge.</p>
                         </details>
-                        <details class="faq-item p-4 rounded-lg cursor-pointer">
-                            <summary class="font-semibold text-lg text-white">Is the extension safe to use?</summary>
-                            <p class="mt-3 text-gray-400">Absolutely. Your privacy is our priority. The extension does not track your browsing history. Your spelling lists are stored locally and securely on your own computer.</p>
+                        <details class="faq-item p-4 sm:p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-base sm:text-lg text-white">Is the extension safe to use?</summary>
+                            <p class="mt-3 text-sm sm:text-base text-gray-400">Absolutely. Your privacy is our priority. The extension does not track your browsing history. Your spelling lists are stored locally and securely on your own computer.</p>
                         </details>
-                         <details class="faq-item p-4 rounded-lg cursor-pointer">
-                            <summary class="font-semibold text-lg text-white">What happens after I pay?</summary>
-                            <p class="mt-3 text-gray-400">You will be instantly redirected to a page with a link to add SpellGuard to Chrome and download your bonus guides.</p>
+                         <details class="faq-item p-4 sm:p-4 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-base sm:text-lg text-white">What happens after I pay?</summary>
+                            <p class="mt-3 text-sm sm:text-base text-gray-400">You will be instantly redirected to a page with a link to add SpellGuard to Chrome and download your bonus guides.</p>
                         </details>
                     </div>
                 </div>
             </section>
 
             <!-- Ko-fi & Final CTA Section -->
-            <section id="support" class="py-20">
-                <div class="max-w-3xl mx-auto px-4 text-center">
-                    <h2 class="text-3xl font-bold text-white">Like Our Work?</h2>
-                    <p class="mt-4 text-lg text-gray-400">We're a small team fueled by passion and coffee. If you find SpellGuard valuable, consider supporting our mission to create more affordable tools for students.</p>
-                    <div class="mt-8 feature-card p-8 rounded-lg">
-                        <p class="text-gray-400">Support our mission to create affordable tools for students by purchasing SpellGuard or making a donation through our support widget.</p>
+            <section id="support" class="py-16 sm:py-20">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Like Our Work?</h2>
+                    <p class="mt-4 text-base sm:text-lg text-gray-400">We're a small team fueled by passion and coffee. If you find SpellGuard valuable, consider supporting our mission to create more affordable tools for students.</p>
+                    <div class="mt-6 sm:mt-8 feature-card p-6 sm:p-8 rounded-lg">
+                        <p class="text-sm sm:text-base text-gray-400">Support our mission to create affordable tools for students by purchasing SpellGuard or making a donation through our support widget.</p>
                     </div>
-                     <div class="mt-16">
-                        <h3 class="text-4xl font-bold text-white">Ready to Secure Your Score?</h3>
-                        <div class="mt-8">
-                            <a href="#payment" class="btn-primary payment-btn text-white font-bold py-4 px-10 text-xl rounded-lg">
+                     <div class="mt-12 sm:mt-16">
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Ready to Secure Your Score?</h3>
+                        <div class="mt-6 sm:mt-8">
+                            <a href="#payment" class="btn-primary payment-btn text-white font-bold py-3 sm:py-4 px-8 sm:px-10 text-lg sm:text-xl rounded-lg inline-block">
                                Yes! Give Me Instant Access for AUD$9
                             </a>
                         </div>
