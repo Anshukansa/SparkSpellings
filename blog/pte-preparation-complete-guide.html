@@ -108,22 +108,28 @@
             background: linear-gradient(90deg, #8E2DE2, #4A00E0);
             transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(142, 45, 226, 0.3);
+            display: inline-block;
+            text-decoration: none;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(142, 45, 226, 0.5);
+            text-decoration: none;
         }
 
         .btn-secondary {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
         }
 
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: rgba(167, 112, 239, 0.5);
+            text-decoration: none;
         }
 
         .content-card {
@@ -200,6 +206,46 @@
             .tip-box, .warning-box, .success-box {
                 padding: 1rem;
                 margin: 1rem 0;
+            }
+            
+            /* Ensure buttons don't overlap on mobile */
+            .btn-primary, .btn-secondary {
+                white-space: nowrap;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        /* Button spacing fixes */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (min-width: 640px) {
+            .button-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* Prevent button text wrapping issues */
+        .btn-primary, .btn-secondary {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 480px) {
+            .btn-primary, .btn-secondary {
+                white-space: normal;
+                min-height: 44px;
+                padding: 12px 16px;
+                font-size: 14px;
             }
         }
 
@@ -289,7 +335,7 @@
                     <div class="mt-6 lg:mt-8 p-4 bg-purple-900/20 border border-purple-500/30 rounded-lg">
                         <h4 class="text-white font-semibold mb-2 text-sm lg:text-base">Eliminate Spelling Mistakes</h4>
                         <p class="text-gray-400 text-xs mb-3">Join 1000+ students using SpellGuard</p>
-                        <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" class="btn-primary w-full text-center py-2 px-3 rounded text-sm" rel="noopener">Get SpellGuard - AUD$9</a>
+                        <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" class="btn-primary w-full text-center py-2 px-3 rounded text-sm block" rel="noopener">Get SpellGuard - AUD$9</a>
                     </div>
                 </nav>
             </aside>
@@ -302,7 +348,7 @@
                         Complete PTE Preparation Guide 2025: <span class="gradient-text">Score 80+ with Expert Tips</span>
                     </h1>
                     <p class="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed">Master PTE Academic with proven strategies that helped 5000+ students achieve their dream scores. This comprehensive guide covers everything from basic concepts to advanced techniques.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
                         <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" class="btn-primary text-white py-3 px-6 rounded-lg font-semibold w-full sm:w-auto text-center" rel="noopener">🚀 Get SpellGuard Tool</a>
                         <a href="/" class="btn-secondary text-white py-3 px-6 rounded-lg font-semibold w-full sm:w-auto text-center">← Back to Home</a>
                     </div>
@@ -548,7 +594,7 @@
                     </div>
 
                     <div class="text-center my-8">
-                        <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" class="btn-primary text-white py-4 px-8 rounded-lg font-bold text-lg inline-block" rel="noopener">Master Your Spelling Weaknesses - Get SpellGuard</a>
+                        <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" class="btn-primary text-white py-3 lg:py-4 px-6 lg:px-8 rounded-lg font-bold text-base lg:text-lg inline-block" rel="noopener">Master Your Spelling Weaknesses - Get SpellGuard</a>
                         <p class="text-gray-400 text-sm mt-2">Join 1000+ students who stopped losing marks to spelling mistakes</p>
                     </div>
                 </section>
@@ -652,13 +698,12 @@
 
                     <p class="text-gray-300">The path to your target score is clear. You have the strategies, you understand the format, and now you need the tools to execute flawlessly.</p>
 
-                    <div class="text-center my-12 p-8 bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-lg border border-purple-500/30">
-                        <h3 class="text-2xl font-bold text-white mb-4">Ready to Secure Your Score?</h3>
+                    <div class="text-center my-12 p-6 lg:p-8 bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-lg border border-purple-500/30">
+                        <h3 class="text-xl lg:text-2xl font-bold text-white mb-4">Ready to Secure Your Score?</h3>
                         <p class="text-gray-300 mb-6">Don't let spelling mistakes steal your dreams. Join the 1000+ students who've eliminated this risk with SpellGuard.</p>
-                        <div class="space-y-4">
-                            <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" class="btn-primary text-white py-4 px-8 rounded-lg font-bold text-lg inline-block" rel="noopener">Get SpellGuard - AUD$9 Only</a>
-                            <br>
-                            <a href="/" class="btn-secondary text-white py-3 px-6 rounded-lg font-semibold">Learn More About SpellGuard</a>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+                            <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" class="btn-primary text-white py-3 px-6 rounded-lg font-bold text-center w-full sm:w-auto" rel="noopener">Get SpellGuard - AUD$9</a>
+                            <a href="/" class="btn-secondary text-white py-3 px-6 rounded-lg font-semibold text-center w-full sm:w-auto">Learn More About SpellGuard</a>
                         </div>
                         <p class="text-gray-400 text-sm mt-4">One-time payment • Instant download • No subscriptions</p>
                     </div>
