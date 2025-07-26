@@ -1,4 +1,10 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://spellguard.jayveertech.com/sitemap.xml
+Disallow: 
+
+# Allow all blog content
+Allow: /blog/
+
+# Sitemap location
+Sitemap: https://sparkspellings.jayveertech.com/sitemap.xml
