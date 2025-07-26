@@ -15,6 +15,9 @@
     <meta name="bingbot" content="index, follow">
     <link rel="canonical" href="https://sparkspellings.jayveertech.com">
     
+    <!-- Sitemap for SEO -->
+    <link rel="sitemap" type="application/xml" href="https://sparkspellings.jayveertech.com/sitemap.xml">
+    
     <!-- Geographic and Language SEO -->
     <meta name="geo.region" content="AU">
     <meta name="geo.placename" content="Australia">
@@ -45,11 +48,22 @@
     <meta name="twitter:image:alt" content="Spark Spellings Chrome Extension for PTE and IELTS Spelling Practice">
     
     <!-- Favicon and Icons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="logo.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="logo.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="logo.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="logo.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="logo.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="logo.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="logo.png">
     <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileImage" content="logo.png">
+    <meta name="msapplication-TileColor" content="#8E2DE2">
+    <meta name="msapplication-config" content="browserconfig.xml">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#8E2DE2">
@@ -127,6 +141,13 @@
           "softwareVersion": "1.0",
           "releaseNotes": "Initial release with personal spelling weakness tracking",
           "screenshot": "https://sparkspellings.jayveertech.com/screenshot.jpg",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://sparkspellings.jayveertech.com/og-image.jpg",
+            "width": 1200,
+            "height": 630,
+            "caption": "Spark Spellings Chrome Extension Interface"
+          },
           "offers": {
             "@type": "Offer",
             "price": "9",
@@ -138,7 +159,31 @@
             },
             "validFrom": "2025-01-01",
             "priceValidUntil": "2025-12-31",
-            "itemCondition": "https://schema.org/NewCondition"
+            "itemCondition": "https://schema.org/NewCondition",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "AUD"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "AU",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail"
+            }
           },
           "author": {
             "@id": "https://sparkspellings.jayveertech.com/#organization"
@@ -153,6 +198,10 @@
           "review": [
             {
               "@type": "Review",
+              "itemReviewed": {
+                "@type": "SoftwareApplication",
+                "name": "Spark Spellings Chrome Extension"
+              },
               "reviewRating": {
                 "@type": "Rating",
                 "ratingValue": "5",
@@ -166,6 +215,10 @@
             },
             {
               "@type": "Review",
+              "itemReviewed": {
+                "@type": "SoftwareApplication",
+                "name": "Spark Spellings Chrome Extension"
+              },
               "reviewRating": {
                 "@type": "Rating",
                 "ratingValue": "5",
@@ -215,11 +268,18 @@
               }
             }
           ]
-        },
+        }
         {
           "@type": "Product",
           "name": "Spark Spellings Chrome Extension",
           "description": "AI-Proof spelling solution for PTE & IELTS students",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://sparkspellings.jayveertech.com/og-image.jpg",
+            "width": 1200,
+            "height": 630,
+            "caption": "Spark Spellings Chrome Extension"
+          },
           "brand": {
             "@type": "Brand",
             "name": "Spark Spellings"
@@ -232,7 +292,32 @@
             "priceCurrency": "AUD",
             "availability": "https://schema.org/InStock",
             "url": "https://ko-fi.com/s/e9f54c8e56",
-            "itemCondition": "https://schema.org/NewCondition"
+            "itemCondition": "https://schema.org/NewCondition",
+            "priceValidUntil": "2025-12-31",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "AUD"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "AU",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnMethod": "https://schema.org/ReturnByMail"
+            }
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -240,7 +325,43 @@
             "reviewCount": "127",
             "bestRating": "5",
             "worstRating": "1"
-          }
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Product",
+                "name": "Spark Spellings Chrome Extension"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Anjali P."
+              },
+              "reviewBody": "I used Spark Spellings for just one week before my first mock test. For the first time ever, I got 100% on the 'Write from Dictation' questions. This tool is a game-changer."
+            },
+            {
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "Product",
+                "name": "Spark Spellings Chrome Extension"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Kartik L."
+              },
+              "reviewBody": "The best part is adding words from anywhere. I was doing a practice test, saw 'hierarchy', knew I'd spell it wrong, and added it instantly. It's now stuck in my head. Amazing."
+            }
+          ]
         }
       ]
     }
@@ -253,7 +374,25 @@
       "@type": "Organization",
       "name": "Spark Spellings",
       "url": "https://sparkspellings.jayveertech.com",
-      "logo": "https://sparkspellings.jayveertech.com/logo.png"
+      "logo": "https://sparkspellings.jayveertech.com/logo.png",
+      "image": "https://sparkspellings.jayveertech.com/og-image.jpg",
+      "description": "AI-Proof spelling solution for PTE & IELTS students"
+    }
+    </script>
+    
+    <!-- Main Website Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Spark Spellings",
+      "url": "https://sparkspellings.jayveertech.com",
+      "description": "Master PTE & IELTS Spelling with AI-Proof Chrome Extension",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sparkspellings.jayveertech.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
     
