@@ -389,6 +389,18 @@
         .sound-toggle.hidden {
             display: none;
         }
+        
+        /* Header styles */
+        header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
     </style>
 </head>
 <body class="antialiased" itemscope itemtype="https://schema.org/WebPage">
@@ -420,21 +432,49 @@
         <div class="radial-gradient-background"></div>
 
         <!-- Header -->
-        <header class="absolute top-0 left-0 right-0 z-10 py-4 sm:py-6 px-4 sm:px-6 lg:px-8" role="banner">
-            <nav class="max-w-6xl mx-auto flex justify-between items-center" role="navigation" aria-label="Main navigation">
-                <h1 class="text-xl sm:text-2xl font-bold text-white" itemprop="headline">Spell<span class="gradient-text">Guard</span></h1>
-                <div class="flex gap-4">
-                    <a href="/blog/pte-preparation-complete-guide.html" class="btn-blog text-white font-semibold py-2 px-4 sm:px-6 rounded-lg text-sm sm:text-base" title="Read PTE & IELTS Spelling Tips and Guides">
-                        📚 Blog
+        <header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800" role="banner">
+            <nav class="max-w-6xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4" role="navigation" aria-label="Main navigation">
+                <div class="flex items-center">
+                    <h1 class="text-xl sm:text-2xl font-bold text-white" itemprop="headline">
+                        Spell<span class="gradient-text">Guard</span>
+                    </h1>
+                </div>
+                
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <!-- Blog Navigation Button -->
+                    <a href="/blog/pte-preparation-complete-guide.html" 
+                       class="hidden sm:flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm font-medium" 
+                       title="Read Complete PTE Preparation Guide">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                        Back to Blog
                     </a>
-                    <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" rel="noopener" class="btn-primary text-white font-semibold py-2 px-4 sm:px-6 rounded-lg text-sm sm:text-base" title="Get SpellGuard Chrome Extension for AUD$9">Get SpellGuard</a>
+                    
+                    <!-- Mobile Blog Button -->
+                    <a href="/blog/pte-preparation-complete-guide.html" 
+                       class="sm:hidden text-gray-300 hover:text-white transition-colors" 
+                       title="Back to Blog">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Get SpellGuard Button -->
+                    <a href="https://ko-fi.com/s/e9f54c8e56" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn-primary text-white font-semibold py-2 px-4 sm:px-6 rounded-lg text-sm sm:text-base whitespace-nowrap" 
+                       title="Get SpellGuard Chrome Extension for AUD$9">
+                        Get SpellGuard
+                    </a>
                 </div>
             </nav>
         </header>
 
         <main class="relative overflow-hidden" role="main">
             <!-- Hero Section -->
-            <section id="hero" class="pt-24 sm:pt-32 pb-16 sm:pb-20 text-center px-4" itemscope itemtype="https://schema.org/Product">
+            <section id="hero" class="pt-32 sm:pt-40 pb-16 sm:pb-20 text-center px-4" itemscope itemtype="https://schema.org/Product">
                 <div class="max-w-4xl mx-auto">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tighter" itemprop="name">
                         SpellGuard: Stop PTE & IELTS Spelling Mistakes <br class="hidden sm:block"> The <span class="gradient-text">AI-Proof Solution</span> Students Need
@@ -1006,6 +1046,27 @@
     </script>
 
     <script>
+        // Navigation logic for different pages
+        const isHomePage = window.location.pathname === '/' || window.location.pathname.includes('index.html') || window.location.pathname === '';
+        const isBlogPage = window.location.pathname.includes('blog') || window.location.pathname.includes('pte-preparation');
+        
+        // Update navigation based on current page
+        document.addEventListener('DOMContentLoaded', function() {
+            const backButtons = document.querySelectorAll('[href="/blog/pte-preparation-complete-guide.html"]');
+            
+            if (isBlogPage) {
+                // If we're on a blog page, change "Back to Blog" to "Back to Home"
+                backButtons.forEach(button => {
+                    button.href = '/';
+                    const textElement = button.querySelector('text-content');
+                    if (button.textContent.includes('Back to Blog')) {
+                        button.innerHTML = button.innerHTML.replace('Back to Blog', 'Back to Home');
+                    }
+                    button.title = 'Return to SpellGuard Homepage';
+                });
+            }
+        });
+
         // Simple animation for elements on scroll - can be expanded
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1038,50 +1099,53 @@
         const showLessBtn = document.getElementById('showLessBtn');
         const hiddenRows = document.querySelectorAll('.hidden-rows');
 
-        seeAllBtn.addEventListener('click', function() {
-            hiddenRows.forEach(row => {
-                row.style.display = 'table-row';
+        if (seeAllBtn && showLessBtn) {
+            seeAllBtn.addEventListener('click', function() {
+                hiddenRows.forEach(row => {
+                    row.style.display = 'table-row';
+                });
+                seeAllBtn.style.display = 'none';
+                showLessBtn.style.display = 'inline-block';
             });
-            seeAllBtn.style.display = 'none';
-            showLessBtn.style.display = 'inline-block';
-        });
 
-        showLessBtn.addEventListener('click', function() {
-            hiddenRows.forEach(row => {
-                row.style.display = 'none';
+            showLessBtn.addEventListener('click', function() {
+                hiddenRows.forEach(row => {
+                    row.style.display = 'none';
+                });
+                showLessBtn.style.display = 'none';
+                seeAllBtn.style.display = 'inline-block';
+                // Scroll back to the table
+                document.getElementById('value').scrollIntoView({ behavior: 'smooth' });
             });
-            showLessBtn.style.display = 'none';
-            seeAllBtn.style.display = 'inline-block';
-            // Scroll back to the table
-            document.getElementById('value').scrollIntoView({ behavior: 'smooth' });
-        });
+        }
 
         // Video play functionality
         const video = document.getElementById('heroVideo');
         const playButton = document.getElementById('playButton');
         
-        playButton.addEventListener('click', function() {
-            video.muted = false;
-            video.play();
-            playButton.classList.add('hidden');
-        });
+        if (video && playButton) {
+            playButton.addEventListener('click', function() {
+                video.muted = false;
+                video.play();
+                playButton.classList.add('hidden');
+            });
 
-        // Show play button again when video ends
-        video.addEventListener('ended', function() {
-            video.muted = true;
-            playButton.classList.remove('hidden');
-        });
+            // Show play button again when video ends
+            video.addEventListener('ended', function() {
+                video.muted = true;
+                playButton.classList.remove('hidden');
+            });
 
-        // Hide play button when video starts playing
-        video.addEventListener('play', function() {
-            playButton.classList.add('hidden');
-        });
+            // Hide play button when video starts playing
+            video.addEventListener('play', function() {
+                playButton.classList.add('hidden');
+            });
 
-        // Show play button if video is paused
-        video.addEventListener('pause', function() {
-            playButton.classList.remove('hidden');
-        });
-
+            // Show play button if video is paused
+            video.addEventListener('pause', function() {
+                playButton.classList.remove('hidden');
+            });
+        }
     </script>
 </body>
 </html>
