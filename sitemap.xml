@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+  
+  <!-- Homepage -->
   <url>
-    <loc>https://spellguard.jayveertech.com/</loc>
+    <loc>https://sparkspellings.jayveertech.com/</loc>
     <lastmod>2025-07-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
+  
+  <!-- Blog Main Page -->
   <url>
-    <loc>https://spellguard.jayveertech.com/blog/pte-preparation-complete-guide.html</loc>
+    <loc>https://sparkspellings.jayveertech.com/blog/</loc>
     <lastmod>2025-07-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://sparkspellings.jayveertech.com/blog/pte-preparation-complete-guide.html</loc>
+    <lastmod>2025-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset>
