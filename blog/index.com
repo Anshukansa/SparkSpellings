@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Blog">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>PTE & IELTS Preparation Blog | Expert Tips & Strategies | Spark Spellings</title>
+    <meta name="description" content="Master PTE & IELTS with expert preparation guides, spelling tips, and test-taking strategies. Free comprehensive guides from former students who achieved their dream scores.">
+    <meta name="keywords" content="PTE preparation, IELTS preparation, PTE tips, IELTS tips, spelling mistakes, exam strategies, test preparation blog, PTE writing, IELTS writing, speaking tips, reading strategies, listening practice, PTE practice, IELTS practice, English test preparation">
+    <meta name="author" content="Jay Veer Tech - Spark Spellings">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <link rel="canonical" href="https://sparkspellings.github.io/blog/">
+    
+    <!-- Geographic and Language SEO -->
+    <meta name="geo.region" content="AU">
+    <meta name="geo.placename" content="Australia">
+    <meta name="language" content="English">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="General">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="PTE & IELTS Preparation Blog | Expert Tips & Strategies | Spark Spellings">
+    <meta property="og:description" content="Master PTE & IELTS with expert preparation guides, spelling tips, and strategies from former students who achieved perfect scores.">
+    <meta property="og:image" content="https://sparkspellings.github.io/blog-og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Spark Spellings PTE IELTS Preparation Blog">
+    <meta property="og:url" content="https://sparkspellings.github.io/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Spark Spellings Blog">
+    <meta property="og:locale" content="en_AU">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SparkSpellings">
+    <meta name="twitter:creator" content="@JayVeerTech">
+    <meta name="twitter:title" content="PTE & IELTS Preparation Blog | Expert Tips & Strategies">
+    <meta name="twitter:description" content="Master PTE & IELTS with expert preparation guides and strategies from former students.">
+    <meta name="twitter:image" content="https://sparkspellings.github.io/blog-og-image.jpg">
+    <meta name="twitter:image:alt" content="Spark Spellings PTE IELTS Preparation Blog">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#8E2DE2">
+    <meta name="msapplication-TileColor" content="#8E2DE2">
+    <meta name="application-name" content="Spark Spellings Blog">
+    <meta name="msapplication-tooltip" content="PTE & IELTS Preparation Tips">
+    
+    <!-- Enhanced Schema.org Structured Data for Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://sparkspellings.github.io/#organization",
+          "name": "Jay Veer Tech",
+          "url": "https://sparkspellings.github.io",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sparkspellings.github.io/logo.png"
+          },
+          "sameAs": [
+            "https://twitter.com/JayVeerTech"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://sparkspellings.github.io/#website",
+          "url": "https://sparkspellings.github.io",
+          "name": "Spark Spellings",
+          "description": "Master PTE & IELTS Spelling with Expert Guides and Tools",
+          "publisher": {
+            "@id": "https://sparkspellings.github.io/#organization"
+          },
+          "inLanguage": "en-AU"
+        },
+        {
+          "@type": "Blog",
+          "@id": "https://sparkspellings.github.io/blog/#blog",
+          "url": "https://sparkspellings.github.io/blog/",
+          "name": "Spark Spellings Blog",
+          "description": "Expert PTE & IELTS preparation guides, tips, and strategies",
+          "publisher": {
+            "@id": "https://sparkspellings.github.io/#organization"
+          },
+          "inLanguage": "en-AU",
+          "about": [
+            "PTE Preparation",
+            "IELTS Preparation", 
+            "English Test Strategies",
+            "Spelling Improvement",
+            "Test Taking Tips"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://sparkspellings.github.io/blog/#webpage",
+          "url": "https://sparkspellings.github.io/blog/",
+          "name": "PTE & IELTS Preparation Blog",
+          "isPartOf": {
+            "@id": "https://sparkspellings.github.io/#website"
+          },
+          "about": {
+            "@id": "https://sparkspellings.github.io/blog/#blog"
+          },
+          "description": "Expert guides and strategies for PTE & IELTS success",
+          "inLanguage": "en-AU"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Styles matching main site */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #E0E0E0;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #A770EF, #CF8BF3, #FDB99B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #8E2DE2, #4A00E0);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(142, 45, 226, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(142, 45, 226, 0.5);
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(167, 112, 239, 0.3);
+            box-shadow: 0 10px 30px rgba(167, 112, 239, 0.2);
+        }
+
+        .featured-card {
+            background: linear-gradient(135deg, rgba(142, 45, 226, 0.1), rgba(74, 0, 224, 0.1));
+            border: 2px solid rgba(167, 112, 239, 0.3);
+        }
+
+        .category-tag {
+            background: linear-gradient(90deg, #8E2DE2, #4A00E0);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .read-time {
+            color: #9CA3AF;
+            font-size: 0.875rem;
+        }
+
+        .grid-background {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .radial-gradient-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(167, 112, 239, 0.2), transparent 40%);
+            z-index: -1;
+        }
+
+        /* Header styles */
+        header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 640px) {
+            .blog-card {
+                margin: 0 -8px;
+            }
+            
+            h1, h2, h3 {
+                word-break: break-word;
+                hyphens: auto;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased" itemscope itemtype="https://schema.org/Blog">
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sparkspellings.github.io"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://sparkspellings.github.io/blog/"
+        }
+      ]
+    }
+    </script>
+
+    <div class="relative">
+        <div class="grid-background"></div>
+        <div class="radial-gradient-background"></div>
+
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800" role="banner">
+            <nav class="max-w-6xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4" role="navigation" aria-label="Main navigation">
+                <div class="flex items-center">
+                    <img src="../logo.png" alt="Spark Spellings Logo" class="w-12 h-12 mr-3" loading="eager">
+                    <a href="../" class="text-xl sm:text-2xl font-bold text-white hover:opacity-80 transition-opacity">
+                        Spark<span class="gradient-text">Spellings</span>
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <!-- Home Navigation Button -->
+                    <a href="../" 
+                       class="text-gray-300 hover:text-white transition-colors text-sm font-medium" 
+                       title="Back to Spark Spellings Home">
+                        Home
+                    </a>
+                    
+                    <!-- Get Spark Spellings Button -->
+                    <a href="https://ko-fi.com/s/e9f54c8e56" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="btn-primary text-white font-semibold py-2 px-3 sm:px-6 rounded-lg text-xs sm:text-base whitespace-nowrap" 
+                       title="Get Spark Spellings Chrome Extension for AUD$9">
+                        Get Spark Spellings
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="relative overflow-hidden" role="main">
+            <!-- Hero Section -->
+            <section id="hero" class="pt-32 sm:pt-40 pb-16 sm:pb-20 text-center px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tighter">
+                        Master PTE & IELTS with <br class="hidden sm:block"><span class="gradient-text">Expert Strategies</span>
+                    </h1>
+                    <p class="mt-4 sm:mt-6 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 px-4">
+                        Free comprehensive guides, proven strategies, and insider tips from former students who achieved their dream scores. Everything you need to succeed.
+                    </p>
+                    <div class="mt-8 flex flex-wrap justify-center gap-4">
+                        <span class="category-tag">PTE Preparation</span>
+                        <span class="category-tag">IELTS Tips</span>
+                        <span class="category-tag">Spelling Guides</span>
+                        <span class="category-tag">Expert Strategies</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Blog Section -->
+            <section id="featured" class="py-16 sm:py-20 bg-black">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+                            <span class="gradient-text">Featured Guide</span>
+                        </h2>
+                        <p class="mt-4 text-gray-400 text-base sm:text-lg">
+                            Our most comprehensive and popular preparation guide
+                        </p>
+                    </div>
+
+                    <!-- Featured Blog Card - This will be generated from the blogs array -->
+                    <div id="featuredBlog" class="max-w-4xl mx-auto">
+                        <!-- Featured blog will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Blogs Section -->
+            <section id="all-blogs" class="py-16 sm:py-20">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+                            All <span class="gradient-text">Expert Guides</span>
+                        </h2>
+                        <p class="mt-4 text-gray-400 text-base sm:text-lg">
+                            Everything you need to master PTE & IELTS
+                        </p>
+                    </div>
+
+                    <!-- Blog Grid - This will be generated from the blogs array -->
+                    <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <!-- Blog cards will be inserted here by JavaScript -->
+                    </div>
+
+                    <!-- Load More Button (for future when you have many blogs) -->
+                    <div class="text-center mt-12" id="loadMoreSection" style="display: none;">
+                        <button id="loadMoreBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                            Load More Articles
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section id="cta" class="py-16 sm:py-20 bg-black">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+                        Ready to <span class="gradient-text">Guarantee Your Success?</span>
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
+                        You've read the strategies. Now get the tool that puts them into action. Stop losing marks to spelling mistakes forever.
+                    </p>
+                    <div class="mt-8">
+                        <a href="https://ko-fi.com/s/e9f54c8e56" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="btn-primary text-white font-bold py-3 sm:py-4 px-6 sm:px-10 text-base sm:text-lg rounded-lg inline-block" 
+                           title="Get Spark Spellings Chrome Extension for AUD$9">
+                            Get Spark Spellings for Just AUD$9
+                        </a>
+                        <p class="mt-3 text-xs sm:text-sm text-gray-500">Limited-time launch price. No subscription. Lifetime access.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-800 py-8" role="contentinfo">
+            <div class="max-w-6xl mx-auto px-4 text-center text-gray-500">
+                <p class="font-semibold text-lg text-white mb-2">Made with ❤️ by Jay Veer Tech</p>
+                <p>&copy; 2025 Spark Spellings. All Rights Reserved.</p>
+                <nav class="mt-4" aria-label="Footer navigation">
+                    <a href="../privacy-policy.html" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+                    <a href="../terms-of-service.html" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+                    <a href="../contact.html" class="text-gray-400 hover:text-white mx-2">Contact</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 🚀 SUPER EASY BLOG MANAGEMENT SYSTEM
+        // To add a new blog, just add one object to this array!
+        const blogs = [
+            {
+                id: 1,
+                title: "Complete PTE Preparation Guide 2025",
+                slug: "pte-preparation-complete-guide",
+                description: "Master every section of PTE with this comprehensive guide. From speaking strategies to writing techniques, get insider tips from students who scored 90+.",
+                excerpt: "Everything you need to know to ace PTE Academic in 2025. Proven strategies, common mistakes to avoid, and a step-by-step preparation plan.",
+                category: "PTE Preparation",
+                readTime: "15 min read",
+                publishDate: "2025-01-20",
+                featured: true,
+                image: "https://placehold.co/600x400/8E2DE2/FFFFFF?text=PTE+Guide+2025",
+                author: "Jay Veer Tech",
+                tags: ["PTE", "Complete Guide", "Test Preparation", "Speaking", "Writing"],
+                url: "/blog/pte-preparation-complete-guide.html"
+            }
+            // 👆 TO ADD A NEW BLOG: Just copy this structure and add it here!
+            // Example:
+            // {
+            //     id: 2,
+            //     title: "IELTS Writing Task 2 Secrets",
+            //     slug: "ielts-writing-task-2-secrets",
+            //     description: "Discover the hidden patterns examiners look for in IELTS Writing Task 2.",
+            //     excerpt: "Band 9 strategies that most students never learn.",
+            //     category: "IELTS Writing",
+            //     readTime: "10 min read", 
+            //     publishDate: "2025-01-15",
+            //     featured: false,
+            //     image: "https://placehold.co/600x400/4A00E0/FFFFFF?text=IELTS+Writing",
+            //     author: "Jay Veer Tech",
+            //     tags: ["IELTS", "Writing", "Task 2", "Band 9"],
+            //     url: "/blog/ielts-writing-task-2-secrets.html"
+            // }
+        ];
+
+        // Generate featured blog
+        function generateFeaturedBlog() {
+            const featuredBlog = blogs.find(blog => blog.featured) || blogs[0];
+            const featuredContainer = document.getElementById('featuredBlog');
+            
+            featuredContainer.innerHTML = `
+                <article class="blog-card featured-card p-6 sm:p-8 rounded-lg" itemscope itemtype="https://schema.org/BlogPosting">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="category-tag">${featuredBlog.category}</span>
+                                <span class="read-time">${featuredBlog.readTime}</span>
+                                <span class="text-xs text-yellow-400 font-semibold">⭐ FEATURED</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4" itemprop="headline">
+                                ${featuredBlog.title}
+                            </h3>
+                            <p class="text-gray-300 text-sm sm:text-base mb-6" itemprop="description">
+                                ${featuredBlog.description}
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                ${featuredBlog.tags.map(tag => `<span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">${tag}</span>`).join('')}
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-gray-400">
+                                    <span itemprop="author">${featuredBlog.author}</span> • 
+                                    <time itemprop="datePublished" datetime="${featuredBlog.publishDate}">${new Date(featuredBlog.publishDate).toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                                </div>
+                                <a href="${featuredBlog.url}" 
+                                   class="btn-primary text-white font-semibold py-2 px-6 rounded-lg text-sm hover:scale-105 transition-transform" 
+                                   title="Read ${featuredBlog.title}">
+                                    Read Guide →
+                                </a>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <img src="${featuredBlog.image}" 
+                                 alt="${featuredBlog.title}" 
+                                 class="w-full h-64 sm:h-80 object-cover rounded-lg" 
+                                 loading="lazy"
+                                 itemprop="image">
+                        </div>
+                    </div>
+                    
+                    <!-- Schema.org structured data for the featured article -->
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "${featuredBlog.title}",
+                        "description": "${featuredBlog.description}",
+                        "image": "${featuredBlog.image}",
+                        "datePublished": "${featuredBlog.publishDate}",
+                        "dateModified": "${featuredBlog.publishDate}",
+                        "author": {
+                            "@type": "Organization",
+                            "name": "${featuredBlog.author}"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Spark Spellings",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://sparkspellings.github.io/logo.png"
+                            }
+                        },
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://sparkspellings.github.io${featuredBlog.url}"
+                        },
+                        "keywords": "${featuredBlog.tags.join(', ')}"
+                    }
+                    <\/script>
+                </article>
+            `;
+        }
+
+        // Generate blog grid
+        function generateBlogGrid() {
+            const blogGrid = document.getElementById('blogGrid');
+            const nonFeaturedBlogs = blogs.filter(blog => !blog.featured);
+            
+            if (nonFeaturedBlogs.length === 0) {
+                blogGrid.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <div class="blog-card p-8 rounded-lg max-w-md mx-auto">
+                            <h3 class="text-xl font-bold text-white mb-4">More Guides Coming Soon!</h3>
+                            <p class="text-gray-400 mb-6">We're working on more comprehensive guides to help you master PTE & IELTS.</p>
+                            <a href="https://ko-fi.com/s/e9f54c8e56" 
+                               target="_blank" 
+                               rel="noopener" 
+                               class="btn-primary text-white font-semibold py-2 px-6 rounded-lg">
+                                Get Spark Spellings Now
+                            </a>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            blogGrid.innerHTML = nonFeaturedBlogs.map(blog => `
+                <article class="blog-card p-6 rounded-lg" itemscope itemtype="https://schema.org/BlogPosting">
+                    <img src="${blog.image}" 
+                         alt="${blog.title}" 
+                         class="w-full h-48 object-cover rounded-lg mb-4" 
+                         loading="lazy"
+                         itemprop="image">
+                    
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="category-tag">${blog.category}</span>
+                        <span class="read-time">${blog.readTime}</span>
+                    </div>
+                    
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3" itemprop="headline">
+                        ${blog.title}
+                    </h3>
+                    
+                    <p class="text-gray-400 text-sm mb-4" itemprop="description">
+                        ${blog.excerpt}
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        ${blog.tags.slice(0, 3).map(tag => `<span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">${tag}</span>`).join('')}
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="text-xs text-gray-400">
+                            <span itemprop="author">${blog.author}</span><br>
+                            <time itemprop="datePublished" datetime="${blog.publishDate}">${new Date(blog.publishDate).toLocaleDateString('en-AU', { month: 'short', day: 'numeric' })}</time>
+                        </div>
+                        <a href="${blog.url}" 
+                           class="text-purple-400 hover:text-purple-300 font-semibold text-sm transition-colors" 
+                           title="Read ${blog.title}">
+                            Read →
+                        </a>
+                    </div>
+                    
+                    <!-- Schema.org structured data for each article -->
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "headline": "${blog.title}",
+                        "description": "${blog.excerpt}",
+                        "image": "${blog.image}",
+                        "datePublished": "${blog.publishDate}",
+                        "dateModified": "${blog.publishDate}",
+                        "author": {
+                            "@type": "Organization",
+                            "name": "${blog.author}"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Spark Spellings",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://sparkspellings.github.io/logo.png"
+                            }
+                        },
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://sparkspellings.github.io${blog.url}"
+                        },
+                        "keywords": "${blog.tags.join(', ')}"
+                    }
+                    <\/script>
+                </article>
+            `).join('');
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            generateFeaturedBlog();
+            generateBlogGrid();
+            
+            // Show load more button if there are more than 6 blogs
+            if (blogs.length > 6) {
+                document.getElementById('loadMoreSection').style.display = 'block';
+            }
+        });
+
+        // Animation for blog cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Add animation class after DOM loads
+        setTimeout(() => {
+            document.querySelectorAll('.blog-card').forEach(el => {
+                el.classList.add('opacity-0');
+                observer.observe(el);
+            });
+        }, 100);
+        
+        // Add animation styles
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-in {
+                animation: fadeIn 0.6s ease-out forwards;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
