@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-Disallow: 
-
-# Allow all blog content
-Allow: /blog/
-
-# Sitemap location
 Sitemap: https://sparkspellings.jayveertech.com/sitemap.xml
