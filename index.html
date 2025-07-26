@@ -386,6 +386,44 @@
             }
         }
 
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 640px) {
+            .btn-primary {
+                padding: 12px 16px;
+                font-size: 14px;
+                line-height: 1.4;
+                word-break: break-word;
+                white-space: normal;
+                text-align: center;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .hero-glow {
+                margin: 0 -16px;
+            }
+            
+            .video-container video {
+                border-radius: 8px;
+            }
+            
+            h1, h2, h3 {
+                word-break: break-word;
+                hyphens: auto;
+            }
+            
+            .text-6xl {
+                font-size: 3rem;
+                line-height: 1.1;
+            }
+            
+            .guarantee-box {
+                margin: 0 -8px;
+            }
+        }
+
         .sound-toggle.hidden {
             display: none;
         }
@@ -443,25 +481,16 @@
                 <div class="flex items-center gap-3 sm:gap-4">
                     <!-- Blog Navigation Button -->
                     <a href="/blog/pte-preparation-complete-guide.html" 
-                       class="hidden sm:flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm font-medium" 
+                       class="text-gray-300 hover:text-white transition-colors text-sm font-medium" 
                        title="Read Complete PTE Preparation Guide">
-                         Blog
-                    </a>
-                    
-                    <!-- Mobile Blog Button -->
-                    <a href="/blog/pte-preparation-complete-guide.html" 
-                       class="sm:hidden text-gray-300 hover:text-white transition-colors" 
-                       title="Back to Blog">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-                        </svg>
+                        Blog
                     </a>
                     
                     <!-- Get SpellGuard Button -->
                     <a href="https://ko-fi.com/s/e9f54c8e56" 
                        target="_blank" 
                        rel="noopener" 
-                       class="btn-primary text-white font-semibold py-2 px-4 sm:px-6 rounded-lg text-sm sm:text-base whitespace-nowrap" 
+                       class="btn-primary text-white font-semibold py-2 px-3 sm:px-6 rounded-lg text-xs sm:text-base whitespace-nowrap" 
                        title="Get SpellGuard Chrome Extension for AUD$9">
                         Get SpellGuard
                     </a>
@@ -479,16 +508,21 @@
                     <p class="mt-4 sm:mt-6 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 px-4" itemprop="description">
                         For just AUD$9, get the only tool designed by former students to help you master <strong>your</strong> personal spelling weaknesses and secure the score you deserve.
                     </p>
-                    <div class="mt-8 sm:mt-10">
-                        <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" rel="noopener" class="btn-primary text-white font-bold py-3 sm:py-4 px-6 sm:px-10 text-base sm:text-lg rounded-lg inline-block" title="Purchase SpellGuard Chrome Extension - One-time payment AUD$9" itemprop="url">
+                    <div class="mt-10">
+                        <a href="https://ko-fi.com/s/e9f54c8e56" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="btn-primary text-white font-bold py-3 sm:py-4 px-6 sm:px-10 text-base sm:text-lg rounded-lg inline-block break-words" 
+                           title="Purchase SpellGuard Chrome Extension - One-time payment AUD$9" 
+                           itemprop="url">
                             Stop Losing Marks - Get Instant Access
                         </a>
                     </div>
-                    <div class="mt-12 sm:mt-16 hero-glow rounded-xl">
+                    <div class="mt-12 sm:mt-16 hero-glow rounded-xl mx-4 sm:mx-0">
                         <div class="video-container">
                             <video 
                                 id="heroVideo"
-                                class="rounded-xl border border-purple-500/30 w-full" 
+                                class="rounded-xl border border-purple-500/30 w-full max-w-full" 
                                 src="GIF.mp4" 
                                 muted 
                                 playsinline
@@ -912,10 +946,15 @@
                         <p class="mt-2 text-gray-400">One-time payment. No subscriptions. Ever.</p>
                     </div>
                     <div class="mt-10">
-                        <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" rel="noopener" class="btn-primary text-white font-bold py-4 px-10 text-xl rounded-lg" title="Purchase SpellGuard Chrome Extension - Limited time offer AUD$9" itemprop="url">
+                        <a href="https://ko-fi.com/s/e9f54c8e56" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="btn-primary text-white font-bold py-3 sm:py-4 px-4 sm:px-10 text-sm sm:text-xl rounded-lg inline-block text-center max-w-full" 
+                           title="Purchase SpellGuard Chrome Extension - Limited time offer AUD$9" 
+                           itemprop="url">
                            Get Instant Access Now
                         </a>
-                        <p class="mt-3 text-sm text-gray-500">Limited-Time Launch Price. Price increasing to AUD$49 soon.</p>
+                        <p class="mt-3 text-xs sm:text-sm text-gray-500">Limited-Time Launch Price. Price increasing to AUD$49 soon.</p>
                     </div>
                 </div>
             </section>
@@ -1002,7 +1041,11 @@
                      <div class="mt-12 sm:mt-16">
                         <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Ready to Secure Your Score?</h3>
                         <div class="mt-6 sm:mt-8">
-                            <a href="https://ko-fi.com/s/e9f54c8e56" target="_blank" rel="noopener" class="btn-primary text-white font-bold py-3 sm:py-4 px-8 sm:px-10 text-lg sm:text-xl rounded-lg inline-block" title="Final call to action - Get SpellGuard for AUD$9">
+                            <a href="https://ko-fi.com/s/e9f54c8e56" 
+                               target="_blank" 
+                               rel="noopener" 
+                               class="btn-primary text-white font-bold py-3 sm:py-4 px-4 sm:px-10 text-sm sm:text-xl rounded-lg inline-block text-center max-w-full" 
+                               title="Final call to action - Get SpellGuard for AUD$9">
                                Yes! Give Me Instant Access for AUD$9
                             </a>
                         </div>
@@ -1043,28 +1086,7 @@
     </script>
 
     <script>
-        // Navigation logic for different pages
-        const isHomePage = window.location.pathname === '/' || window.location.pathname.includes('index.html') || window.location.pathname === '';
-        const isBlogPage = window.location.pathname.includes('blog') || window.location.pathname.includes('pte-preparation');
-        
-        // Update navigation based on current page
-        document.addEventListener('DOMContentLoaded', function() {
-            const backButtons = document.querySelectorAll('[href="/blog/pte-preparation-complete-guide.html"]');
-            
-            if (isBlogPage) {
-                // If we're on a blog page, change "Back to Blog" to "Back to Home"
-                backButtons.forEach(button => {
-                    button.href = '/';
-                    const textElement = button.querySelector('text-content');
-                    if (button.textContent.includes('Back to Blog')) {
-                        button.innerHTML = button.innerHTML.replace('Back to Blog', 'Back to Home');
-                    }
-                    button.title = 'Return to SpellGuard Homepage';
-                });
-            }
-        });
-
-        // Simple animation for elements on scroll - can be expanded
+        // Simple animation for elements on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1112,7 +1134,10 @@
                 showLessBtn.style.display = 'none';
                 seeAllBtn.style.display = 'inline-block';
                 // Scroll back to the table
-                document.getElementById('value').scrollIntoView({ behavior: 'smooth' });
+                const valueSection = document.getElementById('value');
+                if (valueSection) {
+                    valueSection.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         }
 
@@ -1143,6 +1168,20 @@
                 playButton.classList.remove('hidden');
             });
         }
+
+        // Ensure buttons work properly on mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add touch event handling for better mobile experience
+            const buttons = document.querySelectorAll('.btn-primary');
+            buttons.forEach(button => {
+                button.addEventListener('touchstart', function() {
+                    this.style.transform = 'translateY(-1px)';
+                });
+                button.addEventListener('touchend', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+            });
+        });
     </script>
 </body>
 </html>
