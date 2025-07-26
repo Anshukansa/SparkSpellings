@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="logo.png"/>
+            <square150x150logo src="logo.png"/>
+            <wide310x150logo src="logo.png"/>
+            <square310x310logo src="logo.png"/>
+            <TileColor>#8E2DE2</TileColor>
+        </tile>
+        <notification>
+            <polling-uri src="https://sparkspellings.jayveertech.com/notifications/"/>
+            <frequency>30</frequency>
+            <cycle>1</cycle>
+        </notification>
+    </msapplication>
+</browserconfig>
