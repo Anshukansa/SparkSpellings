@@ -1350,6 +1350,15 @@
         const playButton = document.getElementById('playButton');
         
         if (video && playButton) {
+            // Ensure video shows first frame when loaded
+            video.addEventListener('loadeddata', function() {
+                video.currentTime = 0;
+                video.pause();
+            });
+
+            // Load the video to show first frame immediately
+            video.load();
+
             playButton.addEventListener('click', function() {
                 video.muted = false;
                 video.play();
